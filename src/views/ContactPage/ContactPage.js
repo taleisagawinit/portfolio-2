@@ -50,7 +50,7 @@ export default function ContactPage(props) {
       </Parallax>
     <div className={classNames(classes.main, classes.mainRaised)}>
       <GridContainer justify="center">
-        <GridItem cs={12} sm={12} md={8}>
+        <GridItem xs={12} sm={12} md={8}>
           <form>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
