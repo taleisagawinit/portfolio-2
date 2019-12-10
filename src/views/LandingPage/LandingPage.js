@@ -49,7 +49,7 @@ export default function LandingPage(props) {
             <GridItem xs={12} sm={12} md={6}>
               <h1 className={classes.title}>Hello! I'm Talei Sagawinit</h1>
               <h4>
-                Full Stack Developer (add short summary here)
+                Add short summary here
               </h4>
               <br />           
             </GridItem>

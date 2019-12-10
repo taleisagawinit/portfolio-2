@@ -37,10 +37,10 @@ export default function SocialSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={team1} alt="..." className={imageClasses} />
+                <img src={require("assets/img/bb8-square.jpg")} alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Gigi Hadid
+                BB8 Droid
                 <br />
                 <small className={classes.smallTitle}>Model</small>
               </h4>
@@ -80,10 +80,10 @@ export default function SocialSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={team2} alt="..." className={imageClasses} />
+                <img src={require("assets/img/bb8-square.jpg")} alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Christian Louboutin
+                R2D2 Droid
                 <br />
                 <small className={classes.smallTitle}>Designer</small>
               </h4>
@@ -116,10 +116,10 @@ export default function SocialSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={team3} alt="..." className={imageClasses} />
+                <img src={require("assets/img/bb8-square.jpg")} alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Kendall Jenner
+                C3P0 Droid
                 <br />
                 <small className={classes.smallTitle}>Model</small>
               </h4>

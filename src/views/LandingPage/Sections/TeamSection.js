@@ -35,12 +35,12 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={12}>
             <Card>
               <GridItem xs={12} sm={12} md={4} className={classes.itemGrid}>
-                <img src={require("assets/img/profile_soundcloud.jpg")} alt="..." className={imageClasses} />
+                <img src={require("assets/img/bb8-square.jpg")} alt="..." className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Employee Communication and Customer Management
+                My Recent Application
                 <br />
-                <small className={classes.smallTitle}>Web App</small>
+                <small className={classes.smallTitle}>Subtitle</small>
               </h4>
               <CardBody>
                 <p className={classes.description}>

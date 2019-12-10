@@ -33,11 +33,11 @@ export default function Footer(props) {
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.creative-tim.com/?ref=mkr-footer"
+                //href="https://www.creative-tim.com/?ref=mkr-footer"
                 className={classes.block}
                 target="_blank"
               >
-                Creative Tim
+                Talei Pono
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
@@ -46,25 +46,25 @@ export default function Footer(props) {
                 className={classes.block}
                 target="_blank"
               >
-                About us
+                About
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="http://blog.creative-tim.com/?ref=mkr-footer"
+                //href="http://blog.creative-tim.com/?ref=mkr-footer"
                 className={classes.block}
                 target="_blank"
               >
-                Blog
+                Projects
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.creative-tim.com/license?ref=mkr-footer"
+                //href="https://www.creative-tim.com/license?ref=mkr-footer"
                 className={classes.block}
                 target="_blank"
               >
-                Licenses
+                Contact
               </a>
             </ListItem>
           </List>
@@ -73,13 +73,12 @@ export default function Footer(props) {
           &copy; {1900 + new Date().getYear()} , made with{" "}
           <Favorite className={classes.icon} /> by{" "}
           <a
-            href="https://www.creative-tim.com?ref=mkr-footer"
+            //href="https://www.creative-tim.com?ref=mkr-footer"
             className={aClasses}
             target="_blank"
           >
-            Creative Tim
+            Talei Pono
           </a>{" "}
-          for a better web.
         </div>
       </div>
     </footer>

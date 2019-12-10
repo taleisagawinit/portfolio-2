@@ -3,7 +3,11 @@ import { container, title } from "assets/jss/material-kit-react.js";
 import imagesStyle from "assets/jss/material-kit-react/imagesStyles.js";
 
 const profilePageStyle = {
-  container,
+  container: {
+    zIndex: "12",
+    color: "#FFFFFF",
+    ...container
+  },
   profile: {
     textAlign: "center",
     "& img": {
@@ -40,7 +44,8 @@ const profilePageStyle = {
     position: "relative",
     marginTop: "30px",
     minHeight: "32px",
-    textDecoration: "none"
+    textDecoration: "none",
+    color: "#FFFFFF"
   },
   socials: {
     marginTop: "0",

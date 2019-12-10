@@ -55,39 +55,33 @@ export default function ProfilePage(props) {
         }}
         {...rest}
       />
-      <Parallax small filter image={require("assets/img/confetti.jpg")} />
+      <Parallax small filter image={require("assets/img/confetti.jpg")}>
+        <div className={classes.container}>
+          <GridContainer>
+            <GridItem xs={12} sm={12} md={6}>
+              <h1 className={classes.title}>Projects</h1>
+              <h4>
+                Add summary of projects
+              </h4>
+              <br />           
+            </GridItem>
+          </GridContainer>
+        </div>
+      </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={6}>
                 <div className={classes.profile}>
-                  <div>
-                    <img src={require("assets/img/profile_soundcloud.jpg")} alt="..." className={imageClasses} />
-                  </div>
                   <div className={classes.name}>
-                    <h3 className={classes.title}>Talei Sagawinit</h3>
-                    <h6>APP DEVELOPER</h6>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"far fa-envelope"} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-github"} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-linkedin-in"} />
-                    </Button>
+                   
                   </div>
                 </div>
               </GridItem>
             </GridContainer>
             <div className={classes.description}>
-              <p>
-                An artist of considerable range, Chet Faker — the name taken by
-                Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                and records all of his own music, giving it a warm, intimate
-                feel with a solid groove structure.{" "}
-              </p>
+         
             </div>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
