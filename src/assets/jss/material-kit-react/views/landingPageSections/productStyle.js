@@ -1,8 +1,8 @@
-import { title } from "assets/jss/material-kit-react.js";
+import { title, infoColor } from "assets/jss/material-kit-react.js";
 
 const productStyle = {
   section: {
-    padding: "70px 0",
+    paddingTop: "70px",
     textAlign: "center"
   },
   title: {
@@ -14,7 +14,11 @@ const productStyle = {
   },
   description: {
     color: "#999"
+  },
+  info: {
+    color: infoColor
   }
+  
 };
 
 export default productStyle;

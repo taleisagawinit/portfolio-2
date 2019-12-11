@@ -18,7 +18,6 @@ const infoStyle = {
   iconWrapper: {
     float: "left",
     marginTop: "24px",
-    marginRight: "10px"
   },
   primary: {
     color: primaryColor
@@ -42,8 +41,8 @@ const infoStyle = {
     color: grayColor
   },
   icon: {
-    width: "36px",
-    height: "36px"
+    width: "48px",
+    height: "48px"
   },
   descriptionWrapper: {
     color: grayColor,
@@ -54,14 +53,19 @@ const infoStyle = {
     color: grayColor,
     overflow: "hidden",
     marginTop: "0px",
-    fontSize: "14px"
+    fontSize: "16px"
+  },
+  list: {
+    marginBottom: "0",
+    padding: "0",
+    marginTop: "0"
   },
   iconWrapperVertical: {
     float: "none"
   },
   iconVertical: {
-    width: "61px",
-    height: "61px"
+    width: "71px",
+    height: "71px"
   }
 };
 

@@ -33,38 +33,11 @@ export default function Footer(props) {
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
               <a
-                //href="https://www.creative-tim.com/?ref=mkr-footer"
+                href="https://unsplash.com/photos/Xaanw0s0pMk"
                 className={classes.block}
                 target="_blank"
               >
-                Talei Pono
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/presentation?ref=mkr-footer"
-                className={classes.block}
-                target="_blank"
-              >
-                About
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                //href="http://blog.creative-tim.com/?ref=mkr-footer"
-                className={classes.block}
-                target="_blank"
-              >
-                Projects
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                //href="https://www.creative-tim.com/license?ref=mkr-footer"
-                className={classes.block}
-                target="_blank"
-              >
-                Contact
+                Photo by Jason Leung on Unsplash
               </a>
             </ListItem>
           </List>

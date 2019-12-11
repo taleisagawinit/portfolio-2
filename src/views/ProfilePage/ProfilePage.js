@@ -15,6 +15,7 @@ import Parallax from "components/Parallax/Parallax.js";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
+import Badge from "components/Badge/Badge.js";
 
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
@@ -43,7 +44,7 @@ export default function ProfilePage(props) {
         }}
         {...rest}
       />
-      <Parallax small filter image={require("assets/img/confetti.jpg")}>
+      <Parallax small image={require("assets/img/confetti.jpg")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
@@ -58,13 +59,13 @@ export default function ProfilePage(props) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
-          <div className={classes.container}>
+          <div className={classes.projContainer}>
             <GridContainer>
             {projectsArr.map(x => (
             <GridItem xs={12} sm={12} md={4}>
               <Card>
-                <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                  <img src={require("assets/img/bb8-square.jpg")} alt="..." className={imageClasses} />
+                <GridItem xs={12} sm={12} md={12} className={classes.itemGrid}>
+                  <img src={require("assets/img/bb8.jpg")} alt="..." className={imageClasses} />
                 </GridItem>
                 <h4 className={classes.cardTitle}>
                   BB8 Droid
@@ -80,27 +81,9 @@ export default function ProfilePage(props) {
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>
-                  <Button
-                    justIcon
-                    color="transparent"
-                    className={classes.margin5}
-                  >
-                    <i className={classes.socials + " fab fa-twitter"} />
-                  </Button>
-                  <Button
-                    justIcon
-                    color="transparent"
-                    className={classes.margin5}
-                  >
-                    <i className={classes.socials + " fab fa-instagram"} />
-                  </Button>
-                  <Button
-                    justIcon
-                    color="transparent"
-                    className={classes.margin5}
-                  >
-                    <i className={classes.socials + " fab fa-facebook"} />
-                  </Button>
+                  <Badge>HTML</Badge>
+                  <Badge>CSS</Badge>
+                  <Badge>JavaScript</Badge>
                 </CardFooter>
               </Card>
             </GridItem>

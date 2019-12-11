@@ -7,6 +7,12 @@ const profilePageStyle = {
     zIndex: "12",
     color: "#FFFFFF",
     padding: "70px 0",
+    ...container
+  },
+  projContainer: {
+    padding: "70px 0",
+    zIndex: "12",
+    color: "#FFFFFF",
     textAlign: "center",
     ...container
   },

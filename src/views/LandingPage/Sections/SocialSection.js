@@ -31,7 +31,6 @@ export default function SocialSection() {
   );
   return (
     <div className={classes.section}>
-      <h2 className={classes.title}>Meetup With Me</h2>
       <div>
         <GridContainer>
           <GridItem xs={12} sm={12} md={4}>

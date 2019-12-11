@@ -35,7 +35,7 @@ export default function ContactPage(props) {
         }}
         {...rest}
       />
-      <Parallax small filter image={require("assets/img/confetti.jpg")}>
+      <Parallax small image={require("assets/img/confetti.jpg")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
