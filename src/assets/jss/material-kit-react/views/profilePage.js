@@ -1,4 +1,4 @@
-import { container, title } from "assets/jss/material-kit-react.js";
+import { container, title, cardTitle } from "assets/jss/material-kit-react.js";
 
 import imagesStyle from "assets/jss/material-kit-react/imagesStyles.js";
 
@@ -6,6 +6,8 @@ const profilePageStyle = {
   container: {
     zIndex: "12",
     color: "#FFFFFF",
+    padding: "70px 0",
+    textAlign: "center",
     ...container
   },
   profile: {
@@ -27,6 +29,14 @@ const profilePageStyle = {
     marginTop: "-80px"
   },
   ...imagesStyle,
+  itemGrid: {
+    marginLeft: "auto",
+    marginRight: "auto"
+  },
+  cardTitle,
+  smallTitle: {
+    color: "#6c757d"
+  },
   main: {
     background: "#FFFFFF",
     position: "relative",
@@ -61,6 +71,15 @@ const profilePageStyle = {
   navWrapper: {
     margin: "20px auto 50px auto",
     textAlign: "center"
+  },
+  description: {
+    color: "#999"
+  },
+  justifyCenter: {
+    justifyContent: "center !important"
+  },
+  margin5: {
+    margin: "5px"
   }
 };
 
