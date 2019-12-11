@@ -13,6 +13,7 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
 import Parallax from "components/Parallax/Parallax.js";
 
+import Footer from "components/Footer/Footer.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
 
@@ -24,7 +25,7 @@ export default function ContactPage(props) {
 
   return (
     <div>
-    <Header
+      <Header
         color="transparent"
         brand="Insert Logo"
         rightLinks={<HeaderLinks />}
@@ -41,17 +42,19 @@ export default function ContactPage(props) {
             <GridItem xs={12} sm={12} md={6}>
               <h1 className={classes.title}>Contact</h1>
               <h4>
-              Add contact summary
+                Add summary of contact
               </h4>
               <br />           
             </GridItem>
           </GridContainer>
         </div>
       </Parallax>
-    <div className={classNames(classes.main, classes.mainRaised)}>
-      <GridContainer justify="center">
-        <GridItem xs={12} sm={12} md={8}>
-          <form>
+      <div className={classNames(classes.main, classes.mainRaised)}>
+        <div>
+          <div className={classes.projContainer}>
+            <GridContainer>            
+            <GridItem xs={12} sm={12} md={12}>
+            <form>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
@@ -85,14 +88,17 @@ export default function ContactPage(props) {
               />
               <GridContainer justify="center">
                 <GridItem xs={12} sm={12} md={4} className={classes.textCenter}>
-                  <Button color="primary">Send Message</Button>
+                  <Button color="info">Send Message</Button>
                 </GridItem>
               </GridContainer>
             </GridContainer>
           </form>
-        </GridItem>
-      </GridContainer>
-    </div>
+            </GridItem>
+            </GridContainer>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }

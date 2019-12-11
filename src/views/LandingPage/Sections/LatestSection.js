@@ -12,11 +12,11 @@ import Button from "components/CustomButtons/Button.js";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
-import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
+import styles from "assets/jss/material-kit-react/views/landingPageSections/latestStyle.js";
 
 const useStyles = makeStyles(styles);
 
-export default function TeamSection() {
+export default function LatestSection() {
   const classes = useStyles();
   const imageClasses = classNames(
     classes.imgRaised,
@@ -28,13 +28,13 @@ export default function TeamSection() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false
+    autoplay: true
   };
   return (
     <div className={classes.section}>
       <h2 className={classes.title}>In The Works</h2>
       <div>
-        <GridContainer>
+        <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={12}>
             <Card carousel>
               <Carousel {...settings}>

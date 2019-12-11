@@ -48,7 +48,13 @@ const infoStyle = {
     color: grayColor,
     overflow: "hidden"
   },
-  title,
+  title: {
+    color: "#3C4858",
+    margin: "0.5rem 0 0.5rem",
+    textDecoration: "none",
+    fontWeight: "700",
+    fontFamily: `"Roboto Slab", "Times New Roman", serif`
+  },
   description: {
     color: grayColor,
     overflow: "hidden",

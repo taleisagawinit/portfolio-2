@@ -16,8 +16,9 @@ const productStyle = {
     color: "#999"
   },
   info: {
-    color: infoColor
-  }
+    color: infoColor,
+    marginRight: "0.25rem"
+  },
   
 };
 

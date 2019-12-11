@@ -1,4 +1,5 @@
 import { container, title } from "assets/jss/material-kit-react.js";
+import imagesStyle from "assets/jss/material-kit-react/imagesStyles.js";
 
 const landingPageStyle = {
   container: {
@@ -6,6 +7,7 @@ const landingPageStyle = {
     color: "#FFFFFF",
     ...container
   },
+  ...imagesStyle,
   title: {
     ...title,
     display: "inline-block",

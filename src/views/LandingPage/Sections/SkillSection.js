@@ -15,10 +15,10 @@ import InfoArea from "components/InfoArea/InfoArea.js";
 import Card from "components/Card/Card.js";
 
 
-import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
+import styles from "assets/jss/material-kit-react/views/landingPageSections/skillStyle.js";
 
 const useStyles = makeStyles(styles);
-export default function ProductSection() {
+export default function SkillSection() {
   const classes = useStyles();
   return (
     <div className={classes.section}>

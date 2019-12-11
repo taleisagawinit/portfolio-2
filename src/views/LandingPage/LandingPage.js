@@ -18,8 +18,8 @@ import Parallax from "components/Parallax/Parallax.js";
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
-import ProductSection from "./Sections/ProductSection.js";
-import TeamSection from "./Sections/TeamSection.js";
+import SkillSection from "./Sections/SkillSection.js";
+import LatestSection from "./Sections/LatestSection.js";
 import SocialSection from "./Sections/SocialSection.js";
 
 const dashboardRoutes = [];
@@ -29,6 +29,11 @@ const useStyles = makeStyles(styles);
 export default function LandingPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
+  const imageClasses = classNames(
+    classes.imgRaised,
+    classes.imgRoundedCircle,
+    classes.imgFluid
+  );
   return (
     <div>
       <Header
@@ -46,6 +51,9 @@ export default function LandingPage(props) {
       <Parallax image={require("assets/img/confetti.jpg")}>
         <div className={classes.container}>
           <GridContainer>
+            <GridItem xs={12} sm={12} md={3}>
+              <img src={require("assets/img/bb8-square.jpg")} className={imageClasses} alt="..."/>
+            </GridItem>
             <GridItem xs={12} sm={12} md={6}>
               <h1 className={classes.title}>Hello! I'm Talei Sagawinit</h1>
               <h4>
@@ -58,8 +66,8 @@ export default function LandingPage(props) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <ProductSection />
-          <TeamSection />
+          <SkillSection />
+          <LatestSection />
         </div>
       </div>
       <Footer />

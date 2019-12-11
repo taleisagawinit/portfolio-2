@@ -6,6 +6,13 @@ const workStyle = {
     color: "#FFFFFF",
     ...container
   },
+  projContainer: {
+    padding: "70px 0",
+    zIndex: "12",
+    color: "#FFFFFF",
+    textAlign: "center",
+    ...container
+  },
   section: {
     padding: "70px 0"
   },
