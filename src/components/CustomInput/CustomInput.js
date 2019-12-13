@@ -64,6 +64,7 @@ export default function CustomInput(props) {
           {...labelProps}
         >
           {labelText}
+          <input hidden type="text" name={id} value={value} onChange={onChange} />
         </InputLabel>
       ) : null}
       <Input
