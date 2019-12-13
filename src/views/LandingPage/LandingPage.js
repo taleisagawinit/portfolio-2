@@ -39,7 +39,7 @@ export default function LandingPage(props) {
       <Header
         color="transparent"
         routes={dashboardRoutes}
-        brand="Logo Here"
+        brand="talei pono"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
@@ -51,11 +51,11 @@ export default function LandingPage(props) {
       <Parallax image={require("assets/img/confetti.jpg")}>
         <div className={classes.container}>
           <GridContainer>
-            <GridItem xs={12} sm={12} md={3}>
+            <GridItem xs={6} sm={4} md={3}>
               <img src={require("assets/img/bb8-square.jpg")} className={imageClasses} alt="..."/>
             </GridItem>
-            <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Hello! I'm Talei Sagawinit</h1>
+            <GridItem xs={12} sm={6} md={6}>
+              <h1 className={classes.title}>Hello! I'm Talei</h1>
               <h4>
                 Add short summary here
               </h4>

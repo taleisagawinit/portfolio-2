@@ -27,7 +27,7 @@ export default function ContactPage(props) {
     <div>
       <Header
         color="transparent"
-        brand="Insert Logo"
+        brand="talei pono"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
