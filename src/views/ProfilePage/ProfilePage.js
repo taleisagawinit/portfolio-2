@@ -35,7 +35,7 @@ export default function ProfilePage(props) {
     <div>
       <Header
         color="transparent"
-        brand="Insert Logo"
+        brand="talei pono"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{

@@ -47,6 +47,18 @@ const container = {
   }
 };
 
+const mainRaised = {
+  margin: "-60px 30px 0px",
+  borderRadius: "6px",
+  boxShadow:
+    "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
+  "@media (max-width: 576px)": {
+    margin: "0",
+    borderRadius: "0",
+    boxShadow: "none"
+  },
+};
+
 const boxShadow = {
   boxShadow:
     "0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
@@ -213,5 +225,6 @@ export {
   title,
   cardTitle,
   cardLink,
-  cardSubtitle
+  cardSubtitle,
+  mainRaised
 };
