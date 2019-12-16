@@ -16,8 +16,14 @@ const infoStyle = {
     padding: "0px"
   },
   iconWrapper: {
+    position: "relative",
+    top: "0",
     float: "left",
     marginTop: "24px",
+    //background: grayColor,
+    //borderRadius: "50%",
+    //width: "4rem",
+    //height: "4rem"
   },
   primary: {
     color: primaryColor

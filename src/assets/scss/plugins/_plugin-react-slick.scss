@@ -20,6 +20,13 @@
     .slick-caption {
       display: block !important;
     }
+
+  }
+
+  @media (max-width: 768px) {
+    .slick-list {
+      height: 400px;
+    }
   }
 
   .slick-caption {
@@ -46,6 +53,7 @@
   }
   .slick-image {
     width: 100% !important;
+    height: 100%;
     display: inline-flex !important;
   }
 }
@@ -59,6 +67,7 @@
   margin: 0;
   padding: 0;
 }
+
 .slick-list:focus {
   outline: none;
 }

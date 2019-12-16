@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles.css"
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -50,12 +51,12 @@ export default function LandingPage(props) {
       />
       <Parallax image={require("assets/img/confetti.jpg")}>
         <div className={classes.container}>
-          <GridContainer>
-            <GridItem xs={12} sm={12} md={3}>
+          <GridContainer justify="center">
+            <GridItem xs={6} sm={6} md={3}>
               <img src={require("assets/img/bb8-square.jpg")} className={imageClasses} alt="..."/>
             </GridItem>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Hello! I'm Talei Sagawinit</h1>
+              <h1 className={classes.title}>Hello World!</h1>
               <h4>
                 Add short summary here
               </h4>
@@ -64,7 +65,7 @@ export default function LandingPage(props) {
           </GridContainer>
         </div>
       </Parallax>
-      <div className={classNames(classes.main, classes.mainRaised)}>
+      <div id="test" className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <SkillSection />
           <LatestSection />

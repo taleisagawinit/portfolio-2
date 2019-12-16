@@ -41,6 +41,10 @@ const teamStyle = {
   },
   margin5: {
     margin: "5px"
+  },
+  test: {
+    backgroundImage: require("assets/img/bb8.jpg"), 
+    backgroundSize: "cover"
   }
 };
 

@@ -2,7 +2,6 @@ import { title, infoColor } from "assets/jss/material-kit-react.js";
 
 const productStyle = {
   section: {
-    paddingTop: "70px",
     textAlign: "center"
   },
   title: {
