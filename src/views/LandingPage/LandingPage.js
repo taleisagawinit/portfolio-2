@@ -1,5 +1,4 @@
 import React from "react";
-import "./styles.css"
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -34,7 +33,8 @@ export default function LandingPage(props) {
   const imageClasses = classNames(
     classes.imgRaised,
     classes.imgRoundedCircle,
-    classes.imgFluid
+    classes.imgFluid,
+    classes.border
   );
   return (
     <div>
@@ -50,10 +50,10 @@ export default function LandingPage(props) {
         }}
         {...rest}
       />
-      <Parallax filter image={require("assets/img/confetti.jpg")}>
+      <Parallax image={require("assets/img/bg.jpg")}>
         <div className={classes.container}>
           <GridContainer>
-            <GridItem xs={6} sm={4} md={3}>
+          <GridItem xs={6} sm={4} md={3}>
               <img src={require("assets/img/bb8-square.jpg")} className={imageClasses} alt="..."/>
             </GridItem>
             <GridItem xs={12} sm={6} md={9}>
@@ -63,18 +63,22 @@ export default function LandingPage(props) {
               placement={window.innerWidth > 959 ? "top" : "left"}
               classes={{ tooltip: classes.tooltip }}
             >
-                <h1 className={classes.title}>Hello World!</h1>
+                <h1 className={classes.title}>Hi! I'm Talei</h1>
             </Tooltip>
               <h4>
-                I'm Talei. I'm a fullstack developer from Las Vegas, NV. I'm always learning, coding and going to tech meetups. I'm currently learning C# and the .NET framework with an app development team. I'm also working on a PWA for a local business, check out the details here
+                I'm a web developer from Las Vegas, NV. I'm always learning, coding and going to tech meetups. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
+                {/* I'm currently learning C# and the .NET framework to create desktop apps. I'm also working on a PWA for a local business, check out the details and more below. TODO: Finish summary  */}
+                {/* --- RevUnit Summer 2019 Tech Scholarship --- LVVWD 2019 IT App Development Work Study Program */}
+
               </h4>
               <br />           
             </GridItem>
+            
           </GridContainer>
         </div>
       </Parallax>
       <div id="test" className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>
+        <div className={classes.section}>
           <SkillSection />
           <LatestSection />
         </div>

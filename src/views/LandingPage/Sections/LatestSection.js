@@ -34,8 +34,8 @@ export default function LatestSection() {
     <div className={classes.section}>
       <h2 className={classes.title}>In The Works</h2>
       <div>
-        <GridContainer justify="center">
-          <GridItem xs={12} sm={12} md={12}>
+        <GridContainer className={classes.cardSection} justify="center">
+          <GridItem xs={12} sm={12} md={10}>
             <Card carousel>
               <Carousel {...settings}>
                 <div>
@@ -63,6 +63,7 @@ export default function LatestSection() {
                   </div>
                 </div>
                 <div>
+                  <img src={require("assets/img/bb8.jpg")} alt="First slide" className="slick-image" />
                   <div className="slick-caption">
                     <h3>Currently Coding To</h3>
                     <h4>
@@ -70,12 +71,15 @@ export default function LatestSection() {
                       Lofi playlist subtitle
                     </h4>
                   </div>
-                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/476769048&color=%2300acc1&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                {/* <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/476769048&color=%2300acc1&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> */}
                   
                 </div>
               </Carousel>
             </Card>
           </GridItem>
+          {/* <GridItem xs={12} sm={12} md={6}>
+            <Card>Section here</Card>
+          </GridItem> */}
         </GridContainer>
       </div>
     </div>

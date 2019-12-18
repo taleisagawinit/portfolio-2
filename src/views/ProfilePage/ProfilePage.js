@@ -57,7 +57,7 @@ export default function ProfilePage(props) {
         }}
         {...rest}
       />
-      <Parallax small image={require("assets/img/confetti.jpg")}>
+      <Parallax small image={require("assets/img/bg.jpg")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
@@ -140,22 +140,19 @@ export default function ProfilePage(props) {
                 </Dialog>
                 </GridItem>
                 <h4 className={classes.cardTitle}>
-                  BB8 Droid
+                  Project Title 
                   <br />
-                  <small className={classes.smallTitle}>Model</small>
+                  <small className={classes.smallTitle}>Subtitle</small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                    You can write here details about one of your team members. You
-                    can give more details about what they do. Feel free to add
-                    some <a href="#pablo">links</a> for people to be able to
-                    follow them outside the site.
+                    Short summary of project here. Click project to open modal of more details (photos, demo, code). TODO: Add hover effects and content
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>
-                  <Badge>HTML</Badge>
-                  <Badge>CSS</Badge>
-                  <Badge>JavaScript</Badge>
+                  <Badge color="primary">HTML</Badge>
+                  <Badge color="primary">CSS</Badge>
+                  <Badge color="primary">JavaScript</Badge>
                 </CardFooter>
               </Card>
             </GridItem>

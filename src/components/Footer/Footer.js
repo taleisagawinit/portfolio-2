@@ -29,7 +29,7 @@ export default function Footer(props) {
   return (
     <footer className={footerClasses}>
       <div className={classes.container}>
-        <div className={classes.left}>
+        {/* <div className={classes.left}>
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
               <a
@@ -37,21 +37,13 @@ export default function Footer(props) {
                 className={classes.block}
                 target="_blank"
               >
-                Photo by Jason Leung on Unsplash
+                talei pono
               </a>
             </ListItem>
           </List>
-        </div>
+        </div> */}
         <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()} , made with{" "}
-          <Favorite className={classes.icon} /> by{" "}
-          <a
-            //href="https://www.creative-tim.com?ref=mkr-footer"
-            className={aClasses}
-            target="_blank"
-          >
-            Talei Pono
-          </a>{" "}
+          &copy; {1900 + new Date().getYear()} 
         </div>
       </div>
     </footer>

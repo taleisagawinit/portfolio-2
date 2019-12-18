@@ -45,7 +45,8 @@ const infoStyle = {
   },
   icon: {
     width: "48px",
-    height: "48px"
+    height: "48px",
+    color: "#fff"
   },
   descriptionWrapper: {
     color: grayColor,
@@ -73,20 +74,23 @@ const infoStyle = {
   },
   iconWrapperVertical: {
     float: "none",
-    // to add circle around icon
-    // float: none;
-    // background: pink;
-    // height: 140px;
-    // width: 140px;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // border-radius: 50%;
+    //background: "#41a5ff",
+    background: primaryColor,
+    width: "125px",
+    height: "125px",
+    justifyContent: "center",
+    display: "flex",
+    alignItems: "center",
+    borderRadius: "50%",
+    border: "5px solid white",
+    position: "absolute",
+    left: "115px",
+    top: "-115px"
   },
   iconVertical: {
     width: "71px",
     height: "71px"
-  }
+  },
 };
 
 export default infoStyle;

@@ -7,10 +7,18 @@ const landingPageStyle = {
   container: {
     zIndex: "12",
     color: "#FFFFFF",
+    ...container
+  },
+  section: {
+    zIndex: "12",
+    color: "#FFFFFF",
     paddingTop: "70px",
     ...container
   },
   ...imagesStyle,
+  border: {
+    border: "5px solid white"
+  },
   title: {
     ...title,
     display: "inline-block",

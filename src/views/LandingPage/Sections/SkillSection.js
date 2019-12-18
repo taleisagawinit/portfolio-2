@@ -26,14 +26,13 @@ export default function SkillSection() {
         <GridItem xs={12} sm={12} md={8}>
           <h2 className={classes.title}>Skills</h2>
           <h4 className={classes.description}>I'm readily learning more and more to add to my tech stack! I especially enjoy writing apps in React, but I have experience in these other frameworks and languages:  
-          {/* I've earned awards from two Las Vegas companies the RevUnit Summer 2019 Tech Scholarship and the LVVWD 2019 IT App Development Work Study Program, for excellence in tech */}
           </h4>
         </GridItem>
       </GridContainer>
       <div>
         <GridContainer>
           <GridItem xs={12} sm={12} md={4}>
-            <Card>
+            <Card className={classes.infoCard}>
             <InfoArea
               title="Frontend"
               description={
@@ -61,13 +60,13 @@ export default function SkillSection() {
                 </List>
               }
               icon={Web}
-              iconColor="info"
+              iconColor="primary"
               vertical
             />
             </Card>
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
-            <Card>
+          <Card className={classes.infoCard}>
             <InfoArea
               title="Backend"
               description={
@@ -95,13 +94,13 @@ export default function SkillSection() {
                 </List>
               }
               icon={Storage}
-              iconColor="info"
+              iconColor="primary"
               vertical
             />
             </Card>
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
-            <Card>
+          <Card className={classes.infoCard}>
             <InfoArea
               title="Others"
               description={
@@ -116,7 +115,7 @@ export default function SkillSection() {
                   </ListItem>
                   <ListItem className={classes.block}>
                   <CheckIcon className={classes.info} />                                      
-                    Agile methodologies
+                    Agile Methodologies
                   </ListItem>
                   <ListItem className={classes.block}>  
                   <CheckIcon className={classes.info} />                                      
@@ -129,7 +128,7 @@ export default function SkillSection() {
                 </List>
               }
               icon={Code}
-              iconColor="info"
+              iconColor="primary"
               vertical
             />
             </Card>

@@ -1,4 +1,4 @@
-import { title, infoColor } from "assets/jss/material-kit-react.js";
+import { title, primaryColor } from "assets/jss/material-kit-react.js";
 
 const productStyle = {
   section: {
@@ -15,9 +15,13 @@ const productStyle = {
     color: "#999"
   },
   info: {
-    color: infoColor,
+    color: primaryColor,
     marginRight: "0.25rem"
   },
+  infoCard: {
+    marginTop: "115px",
+    paddingTop: "30px"
+  }
   
 };
 

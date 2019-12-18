@@ -82,7 +82,7 @@ export default function ContactPage(props) {
         }}
         {...rest}
       />
-      <Parallax small image={require("assets/img/confetti.jpg")}>
+      <Parallax small image={require("assets/img/bg.jpg")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
@@ -165,7 +165,7 @@ export default function ContactPage(props) {
               />
               <GridContainer justify="center">
                 <GridItem xs={12} sm={12} md={4} className={classes.textCenter}>
-                  <Button type="submit" color="info">Send Message</Button>
+                  <Button type="submit" color="primary">Send Message</Button>
                 </GridItem>
               </GridContainer>
             </GridContainer>

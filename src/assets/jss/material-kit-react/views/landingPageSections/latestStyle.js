@@ -6,6 +6,9 @@ const teamStyle = {
     padding: "70px 0",
     textAlign: "center"
   },
+  cardSection: {
+    minHeight: "400px",
+  },
   title: {
     ...title,
     marginBottom: "1rem",
