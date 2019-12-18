@@ -1,6 +1,8 @@
 import { container, title, cardTitle, mainRaised } from "assets/jss/material-kit-react.js";
 
 import imagesStyle from "assets/jss/material-kit-react/imagesStyles.js";
+import modalStyle from "assets/jss/material-kit-react/modalStyle.js";
+
 
 const profilePageStyle = {
   container: {
@@ -49,6 +51,7 @@ const profilePageStyle = {
     zIndex: "3"
   },
   mainRaised,
+  ...modalStyle,
   title: {
     ...title,
     display: "inline-block",

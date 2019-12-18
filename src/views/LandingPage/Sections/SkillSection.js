@@ -25,8 +25,8 @@ export default function SkillSection() {
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
           <h2 className={classes.title}>Skills</h2>
-          <h4 className={classes.description}>insert paragraph aboout skills blah blah insert paragraph aboout skills blah blah insert paragraph aboout skills blah blah
-          insert paragraph aboout skills blah blah insert paragraph aboout skills blah blah
+          <h4 className={classes.description}>I'm readily learning more and more to add to my tech stack! I especially enjoy writing apps in React, but I have experience in these other frameworks and languages:  
+          {/* I've earned awards from two Las Vegas companies the RevUnit Summer 2019 Tech Scholarship and the LVVWD 2019 IT App Development Work Study Program, for excellence in tech */}
           </h4>
         </GridItem>
       </GridContainer>
@@ -40,23 +40,23 @@ export default function SkillSection() {
                 <List className={classes.list}>
                   <ListItem className={classes.block}>
                   <CheckIcon className={classes.info} />                   
-                    React/Redux
+                    HTML
                   </ListItem>
                   <ListItem className={classes.block}>
                   <CheckIcon className={classes.info} />                                        
-                    Angular
+                    CSS
                   </ListItem>
                   <ListItem className={classes.block}>
                   <CheckIcon className={classes.info} />                                      
-                    JavaScript
+                    JavaScript + jQuery
                   </ListItem>
                   <ListItem className={classes.block}>  
                   <CheckIcon className={classes.info} />                                      
-                    HTML
+                    React/Redux + React Native
                   </ListItem>
                   <ListItem className={classes.block}>     
                   <CheckIcon className={classes.info} />                                   
-                    CSS
+                    Angular
                   </ListItem>
                 </List>
               }
@@ -74,23 +74,23 @@ export default function SkillSection() {
                 <List className={classes.list}>
                   <ListItem className={classes.block}>
                   <CheckIcon className={classes.info} />                   
-                    React/Redux
+                    Node + Express
                   </ListItem>
                   <ListItem className={classes.block}>
                   <CheckIcon className={classes.info} />                                        
-                    Angular
+                    mySQL
                   </ListItem>
                   <ListItem className={classes.block}>
                   <CheckIcon className={classes.info} />                                      
-                    JavaScript
+                    mongoDB
                   </ListItem>
                   <ListItem className={classes.block}>  
                   <CheckIcon className={classes.info} />                                      
-                    HTML
+                    AWS (Add specifics)
                   </ListItem>
                   <ListItem className={classes.block}>     
                   <CheckIcon className={classes.info} />                                   
-                    CSS
+                    Firebase
                   </ListItem>
                 </List>
               }
@@ -108,23 +108,23 @@ export default function SkillSection() {
                 <List className={classes.list}>
                   <ListItem className={classes.block}>
                   <CheckIcon className={classes.info} />                   
-                    React/Redux
+                    REST APIs
                   </ListItem>
                   <ListItem className={classes.block}>
                   <CheckIcon className={classes.info} />                                        
-                    Angular
+                    UX + UI Design
                   </ListItem>
                   <ListItem className={classes.block}>
                   <CheckIcon className={classes.info} />                                      
-                    JavaScript
+                    Agile methodologies
                   </ListItem>
                   <ListItem className={classes.block}>  
                   <CheckIcon className={classes.info} />                                      
-                    HTML
+                    Wordpress
                   </ListItem>
                   <ListItem className={classes.block}>     
                   <CheckIcon className={classes.info} />                                   
-                    CSS
+                    Unit Testing
                   </ListItem>
                 </List>
               }

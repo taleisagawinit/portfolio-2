@@ -1,5 +1,7 @@
 import { container, title, mainRaised } from "assets/jss/material-kit-react.js";
 import imagesStyle from "assets/jss/material-kit-react/imagesStyles.js";
+import tooltip from "assets/jss/material-kit-react/tooltipsStyle.js";
+
 
 const landingPageStyle = {
   container: {
@@ -32,6 +34,7 @@ const landingPageStyle = {
     position: "relative",
     zIndex: "3"
   },
+  ...tooltip,
   mainRaised
 };
 

@@ -88,7 +88,7 @@ export default function ContactPage(props) {
             <GridItem xs={12} sm={12} md={6}>
               <h1 className={classes.title}>Contact</h1>
               <h4>
-                Add summary of contact
+                Feedback? Comments? Hiring? Send me a message to connect!
               </h4>
               <br />           
             </GridItem>
@@ -104,7 +104,7 @@ export default function ContactPage(props) {
               <SnackbarContent
                 message={
                   <span>
-                    <b>SUCCESS ALERT:</b> Your message has been sent. 
+                    <b>Success!</b> Your message has been sent. Thank you for reaching out! 
                   </span>
                 }
                 close
@@ -115,7 +115,7 @@ export default function ContactPage(props) {
               <SnackbarContent
                 message={
                   <span>
-                    <b>WARNING ALERT:</b> Your message could not be sent, 
+                    <b>Oh no!</b> Your message could not be sent, 
                     please try again later.
                   </span>
                 }
@@ -178,4 +178,6 @@ export default function ContactPage(props) {
       <Footer />
     </div>
   );
+
+  
 }

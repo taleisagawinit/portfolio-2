@@ -20,10 +20,7 @@ const infoStyle = {
     top: "0",
     float: "left",
     marginTop: "24px",
-    //background: grayColor,
-    //borderRadius: "50%",
-    //width: "4rem",
-    //height: "4rem"
+    
   },
   primary: {
     color: primaryColor
@@ -52,7 +49,9 @@ const infoStyle = {
   },
   descriptionWrapper: {
     color: grayColor,
-    overflow: "hidden"
+    overflow: "hidden",
+    // position: relative;
+    // bottom: 40px;
   },
   title: {
     color: "#3C4858",
@@ -73,7 +72,16 @@ const infoStyle = {
     marginTop: "0"
   },
   iconWrapperVertical: {
-    float: "none"
+    float: "none",
+    // to add circle around icon
+    // float: none;
+    // background: pink;
+    // height: 140px;
+    // width: 140px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // border-radius: 50%;
   },
   iconVertical: {
     width: "71px",

@@ -15,6 +15,7 @@ import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
+import Tooltip from "@material-ui/core/Tooltip";
 
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
@@ -49,16 +50,23 @@ export default function LandingPage(props) {
         }}
         {...rest}
       />
-      <Parallax image={require("assets/img/confetti.jpg")}>
+      <Parallax filter image={require("assets/img/confetti.jpg")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={6} sm={4} md={3}>
               <img src={require("assets/img/bb8-square.jpg")} className={imageClasses} alt="..."/>
             </GridItem>
-            <GridItem xs={12} sm={6} md={6}>
-              <h1 className={classes.title}>Hello! I'm Talei</h1>
+            <GridItem xs={12} sm={6} md={9}>
+            <Tooltip
+              id="instagram-tooltip"
+              title="Hello! I'm Talei"
+              placement={window.innerWidth > 959 ? "top" : "left"}
+              classes={{ tooltip: classes.tooltip }}
+            >
+                <h1 className={classes.title}>Hello World!</h1>
+            </Tooltip>
               <h4>
-                Add short summary here
+                I'm Talei. I'm a fullstack developer from Las Vegas, NV. I'm always learning, coding and going to tech meetups. I'm currently learning C# and the .NET framework with an app development team. I'm also working on a PWA for a local business, check out the details here
               </h4>
               <br />           
             </GridItem>
