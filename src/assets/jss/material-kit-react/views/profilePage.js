@@ -76,9 +76,6 @@ const profilePageStyle = {
     margin: "20px auto 50px auto",
     textAlign: "center"
   },
-  description: {
-    color: "#999"
-  },
   justifyCenter: {
     justifyContent: "center !important"
   },

@@ -11,7 +11,6 @@ import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 import Tooltip from "@material-ui/core/Tooltip";
@@ -21,7 +20,6 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 // Sections for this page
 import SkillSection from "./Sections/SkillSection.js";
 import LatestSection from "./Sections/LatestSection.js";
-import SocialSection from "./Sections/SocialSection.js";
 
 const dashboardRoutes = [];
 

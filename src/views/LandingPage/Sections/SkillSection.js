@@ -13,11 +13,9 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
 import Card from "components/Card/Card.js";
-
-
 import styles from "assets/jss/material-kit-react/views/landingPageSections/skillStyle.js";
-
 const useStyles = makeStyles(styles);
+
 export default function SkillSection() {
   const classes = useStyles();
   return (
@@ -36,6 +34,7 @@ export default function SkillSection() {
             <InfoArea
               title="Frontend"
               description={
+                <div>
                 <List className={classes.list}>
                   <ListItem className={classes.block}>
                   <CheckIcon className={classes.info} />                   
@@ -58,6 +57,7 @@ export default function SkillSection() {
                     Angular
                   </ListItem>
                 </List>
+                </div>
               }
               icon={Web}
               iconColor="primary"
