@@ -82,7 +82,7 @@ export default function ProfilePage(props) {
             <GridItem xs={12} sm={12} md={6}>
               <h1 className={classes.title}>Projects</h1>
               <h4>
-                Check out my recent apps for clients and personal projects.
+                Check out my projects
               </h4>
               <br />           
             </GridItem>
