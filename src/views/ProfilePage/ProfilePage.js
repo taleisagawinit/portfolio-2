@@ -24,6 +24,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import Zoom from "@material-ui/core/Zoom";
 import IconButton from "@material-ui/core/IconButton";
 import Close from "@material-ui/icons/Close";
+import Carousel from "react-slick";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 //const projects = require("projects.json");
@@ -44,6 +45,14 @@ export default function ProfilePage(props) {
   );
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
   const projectsArr = [1, 2, 3, 4, 5, 6];
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false
+  };
   return (
     <div>
       <Header
@@ -111,18 +120,30 @@ export default function ProfilePage(props) {
                     id="classic-modal-slide-description"
                     className={classes.modalBody}
                   >
+                    <Card carousel>
+                      <Carousel {...settings}>
+                        <div>
+                          <img src={require("assets/img/bb8.jpg")} alt="First slide" className="slick-image" />
+                        </div>
+                        <div>
+                          <img
+                            src={require("assets/img/bb8.jpg")}
+                            alt="Second slide"
+                            className="slick-image"
+                          />
+                        </div>
+                        <div>
+                          <img src={require("assets/img/bb8.jpg")} alt="First slide" className="slick-image" />                         
+                        </div>
+                      </Carousel>                     
+                    </Card>
                     <p>
                       Far far away, behind the word mountains, far from the
                       countries Vokalia and Consonantia, there live the blind
                       texts. Separated they live in Bookmarksgrove right at the
                       coast of the Semantics, a large language ocean. A small
                       river named Duden flows by their place and supplies it
-                      with the necessary regelialia. It is a paradisematic
-                      country, in which roasted parts of sentences fly into your
-                      mouth. Even the all-powerful Pointing has no control about
-                      the blind texts it is an almost unorthographic life One
-                      day however a small line of blind text by the name of
-                      Lorem Ipsum decided to leave for the far World of Grammar.
+                      with the necessary regelialia.
                     </p>
                   </DialogContent>
                   <DialogActions className={classes.modalFooter}>

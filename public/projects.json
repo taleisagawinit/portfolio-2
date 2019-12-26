@@ -1,70 +1,74 @@
-{ 
-  "projects": [
-    {
-      "name": "food service app",
-      "url": "",
-      "desc": "",
-      "caption": "",
-      "img1": "",
-      "img2": "",
-      "img3": "",
-      "img4": "",
-      "img5": ""
-    },
-    {
-      "name": "productivity app",
-      "url": "",
-      "desc": "",
-      "caption": "",
-      "img1": "",
-      "img2": "",
-      "img3": "",
-      "img4": "",
-      "img5": ""
-    },
-    {
-      "name": "jquery game",
-      "url": "",
-      "desc": "",
-      "caption": "",
-      "img1": "",
-      "img2": "",
-      "img3": "",
-      "img4": "",
-      "img5": ""
-    },
-    {
-      "name": "social travel app",
-      "url": "",
-      "desc": "",
-      "caption": "",
-      "img1": "",
-      "img2": "",
-      "img3": "",
-      "img4": "",
-      "img5": ""
-    },
-    {
-      "name": "communication and management app",
-      "url": "",
-      "desc": "",
-      "caption": "",
-      "img1": "",
-      "img2": "",
-      "img3": "",
-      "img4": "",
-      "img5": ""
-    },
-    {
-      "name": "shopping cart",
-      "url": "",
-      "desc": "",
-      "caption": "",
-      "img1": "",
-      "img2": "",
-      "img3": "",
-      "img4": "",
-      "img5": ""
-    }
-  ]
-}
+[
+  {
+    "name": "food service app",
+    "url": "https://github.com/mierome16/kana-app",
+    "desc": "",
+    "tags": ["react", "redux", "node", "express", "mysql"],
+    "caption": "",
+    "img1": "",
+    "img2": "",
+    "img3": "",
+    "img4": "",
+    "img5": ""
+  },
+  {
+    "name": "productivity app",
+    "url": "https://github.com/taleisagawinit/react-todo",
+    "desc": "",
+    "tags": "",
+    "caption": "",
+    "img1": "",
+    "img2": "",
+    "img3": "",
+    "img4": "",
+    "img5": ""
+  },
+  {
+    "name": "jquery game",
+    "url": "https://github.com/taleisagawinit/memory",
+    "desc": "",
+    "tags": "",
+    "caption": "",
+    "img1": "",
+    "img2": "",
+    "img3": "",
+    "img4": "",
+    "img5": ""
+  },
+  {
+    "name": "social travel app",
+    "url": "",
+    "desc": "",
+    "tags": "",
+    "caption": "",
+    "img1": "",
+    "img2": "",
+    "img3": "",
+    "img4": "",
+    "img5": ""
+  },
+  {
+    "name": "communication and management app",
+    "url": "https://github.com/taleisagawinit/resApp",
+    "desc": "",
+    "tags": "",
+    "caption": "",
+    "img1": "",
+    "img2": "",
+    "img3": "",
+    "img4": "",
+    "img5": ""
+  },
+  {
+    "name": "shopping cart",
+    "url": "",
+    "desc": "",
+    "tags": "",
+    "caption": "",
+    "img1": "",
+    "img2": "",
+    "img3": "",
+    "img4": "",
+    "img5": ""
+  }
+]
