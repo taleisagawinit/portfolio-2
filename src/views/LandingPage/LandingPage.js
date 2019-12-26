@@ -43,17 +43,17 @@ export default function LandingPage(props) {
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
-          height: 300,
+          height: 150,
           color: "white"
         }}
         {...rest}
       />
       {/* "linear-gradient(to right bottom, rgb(220, 61, 198), rgb(112, 137, 229))" */}
-      <Parallax image={require("assets/img/bg.jpg")}>
+      <Parallax>
         <div className={classes.container}>
           <GridContainer>
           <GridItem xs={6} sm={4} md={3}>
-              <img src={require("assets/img/bb8-square.jpg")} className={imageClasses} alt="..."/>
+              <img src={require("assets/img/profile.jpg")} className={imageClasses} alt="..."/>
             </GridItem>
             <GridItem xs={12} sm={6} md={9}>
             <Tooltip

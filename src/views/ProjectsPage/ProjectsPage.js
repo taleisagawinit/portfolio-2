@@ -53,12 +53,12 @@ export default function ProjectsPage(props) {
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
-          height: 200,
+          height: 150,
           color: "white"
         }}
         {...rest}
       />
-      <Parallax small image={require("assets/img/bg.jpg")}>
+      <Parallax small>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
