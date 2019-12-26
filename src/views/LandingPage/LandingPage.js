@@ -48,6 +48,7 @@ export default function LandingPage(props) {
         }}
         {...rest}
       />
+      {/* "linear-gradient(to right bottom, rgb(220, 61, 198), rgb(112, 137, 229))" */}
       <Parallax image={require("assets/img/bg.jpg")}>
         <div className={classes.container}>
           <GridContainer>

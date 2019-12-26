@@ -26,6 +26,7 @@ export default function ProjectsPage(props) {
   const classes = useStyles();
   const [classicModal, setClassicModal] = React.useState(false);
   const [projects, setProjects] = React.useState(null);
+  const [item, setItem] = React.useState(null);
   const { ...rest } = props;
   const imageClasses = classNames(
     classes.imgRaised,
@@ -34,11 +35,15 @@ export default function ProjectsPage(props) {
 
   useEffect(() => {
     axios.get('./projects.json').then(resp => {
-      console.log(resp.data)
       setProjects(resp.data)
     })
   }, [])
 
+
+  function toggleModal(x) {
+    setItem(x);
+    setClassicModal(true);
+  }
 
   return (
     <div>
@@ -71,33 +76,32 @@ export default function ProjectsPage(props) {
           <div className={classes.projContainer}>
             <GridContainer>
             {projects ? projects.map(x => (
-            <GridItem xs={12} sm={12} md={4}>
+            <GridItem key={x.id} xs={12} sm={12} md={4}>
               <Card>
                 <GridItem xs={12} sm={12} md={12} className={classes.itemGrid}>
-                  <img src={require("assets/img/bb8.jpg")} onClick={() => setClassicModal(true)} alt="..." className={imageClasses} />
+                  <img src={require("assets/img/bb8.jpg")} onClick={() => toggleModal(x)} alt="..." className={imageClasses} />
                   
                 </GridItem>
                 <h4 className={classes.cardTitle}>
-                  {x.name}
+                  {x.title}
                   <br />
-                  <small className={classes.smallTitle}>Subtitle</small>
+                  <small className={classes.smallTitle}>{x.subtitle}</small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                    Short summary of project here. Click project to open modal of more details (photos, demo, code). TODO: Add hover effects and content
+                    {x.desc}
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>
-                  {x.tags ? x.tags.map(y => <Badge color="primary">{y}</Badge>) : null}
+                  {x.tags ? x.tags.map(y => <Badge key={y} color="primary">{y}</Badge>) : null}
                 </CardFooter>
               </Card>
-              <CustomDialog item={x} open={classicModal} toggle={() => setClassicModal(false)} />
             </GridItem>
-            
             )) : null}
             </GridContainer>
           </div>
         </div>
+        <CustomDialog item={item} open={classicModal} toggle={() => setClassicModal(false)} />
       </div>
       <Footer />
     </div>

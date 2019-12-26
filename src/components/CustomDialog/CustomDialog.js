@@ -13,7 +13,6 @@ import IconButton from "@material-ui/core/IconButton";
 import Close from "@material-ui/icons/Close";
 import Carousel from "react-slick";
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
-
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Zoom direction="down" ref={ref} {...props} />;
 });
@@ -31,7 +30,8 @@ export default function CustomDialog(props) {
     autoplay: false
   };
 
-  return (
+
+  return props.item ? (
     <Dialog
         classes={{
         root: classes.center,
@@ -49,7 +49,7 @@ export default function CustomDialog(props) {
         disableTypography
         className={classes.modalHeader}
         >
-        {props.item.name}
+        {props.item.title}
         <IconButton
             className={classes.modalCloseButton}
             key="close"
@@ -82,12 +82,7 @@ export default function CustomDialog(props) {
             </Carousel>                     
         </Card>
         <p>
-            Far far away, behind the word mountains, far from the
-            countries Vokalia and Consonantia, there live the blind
-            texts. Separated they live in Bookmarksgrove right at the
-            coast of the Semantics, a large language ocean. A small
-            river named Duden flows by their place and supplies it
-            with the necessary regelialia.
+            {props.item.desc}
         </p>
         </DialogContent>
         <DialogActions className={classes.modalFooter}>
@@ -102,6 +97,6 @@ export default function CustomDialog(props) {
             Close
         </Button>
         </DialogActions>
-    </Dialog>
-  );
+    </Dialog> 
+  ) : null
 }
