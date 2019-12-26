@@ -25,6 +25,8 @@ const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
 
+
+
 export default function LandingPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
@@ -34,6 +36,11 @@ export default function LandingPage(props) {
     classes.imgFluid,
     classes.border
   );
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div>
       <Header
@@ -51,11 +58,11 @@ export default function LandingPage(props) {
       {/* "linear-gradient(to right bottom, rgb(220, 61, 198), rgb(112, 137, 229))" */}
       <Parallax>
         <div className={classes.container}>
-          <GridContainer>
+          <GridContainer justify="center">
           <GridItem xs={6} sm={4} md={3}>
               <img src={require("assets/img/profile.jpg")} className={imageClasses} alt="..."/>
             </GridItem>
-            <GridItem xs={12} sm={6} md={9}>
+            <GridItem xs={12} sm={12} md={9}>
             <Tooltip
               id="instagram-tooltip"
               title="Hello! I'm Talei"

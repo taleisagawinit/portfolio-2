@@ -17,7 +17,17 @@ import Menu from "@material-ui/icons/Menu";
 import styles from "assets/jss/material-kit-react/components/headerStyle.js";
 
 const useStyles = makeStyles(styles);
-
+{/* <Header
+        color="transparent"
+        brand="talei pono"
+        rightLinks={<HeaderLinks />}
+        fixed
+        changeColorOnScroll={{
+          height: 150,
+          color: "white"
+        }}
+        {...rest}
+      /> */}
 export default function Header(props) {
   const classes = useStyles();
   const [mobileOpen, setMobileOpen] = React.useState(false);

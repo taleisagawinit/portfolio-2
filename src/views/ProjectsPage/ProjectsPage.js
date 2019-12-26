@@ -39,6 +39,10 @@ export default function ProjectsPage(props) {
     })
   }, [])
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
 
   function toggleModal(x) {
     setItem(x);

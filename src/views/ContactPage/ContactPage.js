@@ -29,9 +29,15 @@ export default function ContactPage(props) {
     message: ''
   })
   const [success, setSuccess] = useState(false)
+  const [emailSuccess, setEmailSuccess] = useState(false)
+  const [msgSuccess, setMsgSuccess] = useState(false)
   const [error, setError] = useState(false)
   const classes = useStyles();
   const { ...rest } = props;
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const encode = (data) => {
     return Object.keys(data)
@@ -57,6 +63,13 @@ export default function ContactPage(props) {
     e.preventDefault();
   } 
 
+  function checkEmail() {
+    validator.isEmail(values.email) ? setEmailSuccess(false) : setEmailSuccess(true)
+  }
+
+  function checkMsg() {
+    !validator.isEmpty(values.message) ? setMsgSuccess(false) : setMsgSuccess(true)
+  }
   //TODO: add checkName function to check validation on blur
 
   function handleChange(e) { 
@@ -125,7 +138,7 @@ export default function ContactPage(props) {
                 <CustomInput
                   labelText="Your Name"
                   id="name"
-                  onBlur={() => console.log(values.name)}
+                  //onBlur={() => console.log(values.name)}
                   // error={}
                   // success={}
                   value={values.name}
@@ -139,9 +152,9 @@ export default function ContactPage(props) {
                 <CustomInput
                   labelText="Your Email"
                   id="email"
-                  // error={}
-                  // success={}
-                  onBlur={() => console.log(values.email)}
+                  //error={emailSuccess}
+                  //success={true}
+                  onBlur={() => checkEmail()}
                   value={values.email}
                   onChange={handleChange}
                   formControlProps={{
@@ -152,9 +165,9 @@ export default function ContactPage(props) {
               <CustomInput
                 labelText="Your Message"
                 id="message"
-                // error={}
-                // success={}
-                onBlur={() => console.log(values.message)}
+                //error={msgSuccess}
+                //success={true}
+                onBlur={() => checkMsg()}
                 value={values.message}
                 onChange={handleChange}
                 formControlProps={{
