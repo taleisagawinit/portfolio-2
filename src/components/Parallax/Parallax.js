@@ -48,7 +48,7 @@ export default function Parallax(props) {
       className={parallaxClasses}
       style={{
         ...style,
-        backgroundImage: "url(" + image + ")",
+        backgroundImage: "linear-gradient(to right bottom, rgb(220, 61, 198), rgb(112, 137, 229))",
         transform: transform
       }}
     >

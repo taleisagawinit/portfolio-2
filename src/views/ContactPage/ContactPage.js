@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-
-// @material-ui/icons
 // @material-ui/icons
 import Check from "@material-ui/icons/Check";
 import Warning from "@material-ui/icons/Warning";
-
 import classNames from "classnames";
 // core components
 import Header from "components/Header/Header.js";
@@ -17,15 +14,11 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
 import Parallax from "components/Parallax/Parallax.js";
 import SnackbarContent from "components/Snackbar/SnackbarContent.js";
-
-
 import Footer from "components/Footer/Footer.js";
-
-import styles from "assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
-
-
 //check that form is valid
 import validator from 'validator'
+
+import styles from "assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
 
 const useStyles = makeStyles(styles);
 
@@ -36,9 +29,15 @@ export default function ContactPage(props) {
     message: ''
   })
   const [success, setSuccess] = useState(false)
+  const [emailSuccess, setEmailSuccess] = useState(false)
+  const [msgSuccess, setMsgSuccess] = useState(false)
   const [error, setError] = useState(false)
   const classes = useStyles();
   const { ...rest } = props;
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const encode = (data) => {
     return Object.keys(data)
@@ -64,6 +63,14 @@ export default function ContactPage(props) {
     e.preventDefault();
   } 
 
+  function checkEmail() {
+    validator.isEmail(values.email) ? setEmailSuccess(false) : setEmailSuccess(true)
+  }
+
+  function checkMsg() {
+    !validator.isEmpty(values.message) ? setMsgSuccess(false) : setMsgSuccess(true)
+  }
+  //TODO: add checkName function to check validation on blur
 
   function handleChange(e) { 
     setValues({ ...values, [e.target.name]: e.target.value });
@@ -77,12 +84,12 @@ export default function ContactPage(props) {
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
-          height: 200,
+          height: 150,
           color: "white"
         }}
         {...rest}
       />
-      <Parallax small image={require("assets/img/bg.jpg")}>
+      <Parallax small>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
@@ -131,6 +138,9 @@ export default function ContactPage(props) {
                 <CustomInput
                   labelText="Your Name"
                   id="name"
+                  //onBlur={() => console.log(values.name)}
+                  // error={}
+                  // success={}
                   value={values.name}
                   onChange={handleChange}
                   formControlProps={{
@@ -142,6 +152,9 @@ export default function ContactPage(props) {
                 <CustomInput
                   labelText="Your Email"
                   id="email"
+                  //error={emailSuccess}
+                  //success={true}
+                  onBlur={() => checkEmail()}
                   value={values.email}
                   onChange={handleChange}
                   formControlProps={{
@@ -152,6 +165,9 @@ export default function ContactPage(props) {
               <CustomInput
                 labelText="Your Message"
                 id="message"
+                //error={msgSuccess}
+                //success={true}
+                onBlur={() => checkMsg()}
                 value={values.message}
                 onChange={handleChange}
                 formControlProps={{

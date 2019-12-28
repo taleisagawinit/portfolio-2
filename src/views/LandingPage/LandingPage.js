@@ -11,7 +11,6 @@ import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 import Tooltip from "@material-ui/core/Tooltip";
@@ -21,11 +20,11 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 // Sections for this page
 import SkillSection from "./Sections/SkillSection.js";
 import LatestSection from "./Sections/LatestSection.js";
-import SocialSection from "./Sections/SocialSection.js";
-import axios from 'axios'
 const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
+
+
 
 export default function LandingPage(props) {
   const classes = useStyles();
@@ -37,6 +36,10 @@ export default function LandingPage(props) {
     classes.border
   );
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div>
       <Header
@@ -46,16 +49,17 @@ export default function LandingPage(props) {
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
-          height: 300,
+          height: 150,
           color: "white"
         }}
         {...rest}
       />
-      <Parallax image={require("assets/img/rsz_group_72x.png")}>
+      {/* "linear-gradient(to right bottom, rgb(220, 61, 198), rgb(112, 137, 229))" */}
+      <Parallax>
         <div className={classes.container}>
-          <GridContainer>
+          <GridContainer justify="center">
           <GridItem xs={6} sm={4} md={3}>
-              <img src={require("assets/img/bb8-square.jpg")} className={imageClasses} alt="..."/>
+              <img src={require("assets/img/profile.jpg")} className={imageClasses} alt="..."/>
             </GridItem>
             <GridItem xs={12} sm={12} md={9}>
             <Tooltip

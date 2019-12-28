@@ -28,7 +28,6 @@ const profilePageStyle = {
     }
   },
   description: {
-    margin: "1.071rem auto 0",
     maxWidth: "600px",
     color: "#999",
     textAlign: "center !important"
@@ -75,9 +74,6 @@ const profilePageStyle = {
   navWrapper: {
     margin: "20px auto 50px auto",
     textAlign: "center"
-  },
-  description: {
-    color: "#999"
   },
   justifyCenter: {
     justifyContent: "center !important"

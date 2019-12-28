@@ -6,7 +6,6 @@ import {
   infoColor,
   roseColor,
   grayColor,
-  title
 } from "assets/jss/material-kit-react.js";
 
 const infoStyle = {
