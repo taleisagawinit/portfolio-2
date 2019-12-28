@@ -24,7 +24,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import Zoom from "@material-ui/core/Zoom";
 import IconButton from "@material-ui/core/IconButton";
 import Close from "@material-ui/icons/Close";
-
+import axios from 'axios';
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 //const projects = require("projects.json");
 
@@ -44,6 +44,13 @@ export default function ProfilePage(props) {
   );
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
   const projectsArr = [1, 2, 3, 4, 5, 6];
+  const [projects, setProjects] = React.useState(null)
+  React.useEffect(() => {
+    axios.get('https://api.github.com/users/taleisagawinit/repos?sort=updated').then(resp =>{
+      setProjects(resp.data)
+    })
+  }, [])
+
   return (
     <div>
       <Header
@@ -74,7 +81,7 @@ export default function ProfilePage(props) {
         <div>
           <div className={classes.projContainer}>
             <GridContainer>
-            {projectsArr.map(x => (
+            {projects ? projects.map(x => (
             <GridItem xs={12} sm={12} md={4}>
               <Card>
                 <GridItem xs={12} sm={12} md={12} className={classes.itemGrid}>
@@ -105,7 +112,7 @@ export default function ProfilePage(props) {
                     >
                       <Close className={classes.modalClose} />
                     </IconButton>
-                    <h4 className={classes.modalTitle}>title</h4>
+                    <h4 className={classes.modalTitle}>{x.id}</h4>
                   </DialogTitle>
                   <DialogContent
                     id="classic-modal-slide-description"
@@ -140,7 +147,7 @@ export default function ProfilePage(props) {
                 </Dialog>
                 </GridItem>
                 <h4 className={classes.cardTitle}>
-                  Project Title 
+                  {x.name}
                   <br />
                   <small className={classes.smallTitle}>Subtitle</small>
                 </h4>
@@ -156,7 +163,7 @@ export default function ProfilePage(props) {
                 </CardFooter>
               </Card>
             </GridItem>
-            ))}
+            )) : null}
             </GridContainer>
           </div>
         </div>

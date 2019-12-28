@@ -22,7 +22,7 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 import SkillSection from "./Sections/SkillSection.js";
 import LatestSection from "./Sections/LatestSection.js";
 import SocialSection from "./Sections/SocialSection.js";
-
+import axios from 'axios'
 const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
@@ -36,6 +36,7 @@ export default function LandingPage(props) {
     classes.imgFluid,
     classes.border
   );
+
   return (
     <div>
       <Header
@@ -50,13 +51,13 @@ export default function LandingPage(props) {
         }}
         {...rest}
       />
-      <Parallax image={require("assets/img/bg.jpg")}>
+      <Parallax image={require("assets/img/rsz_group_72x.png")}>
         <div className={classes.container}>
           <GridContainer>
           <GridItem xs={6} sm={4} md={3}>
               <img src={require("assets/img/bb8-square.jpg")} className={imageClasses} alt="..."/>
             </GridItem>
-            <GridItem xs={12} sm={6} md={9}>
+            <GridItem xs={12} sm={12} md={9}>
             <Tooltip
               id="instagram-tooltip"
               title="Hello! I'm Talei"
