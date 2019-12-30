@@ -85,7 +85,7 @@ export default function SkillSection() {
                   </ListItem>
                   <ListItem className={classes.block}>  
                   <CheckIcon className={classes.info} />                                      
-                    AWS (Add specifics)
+                    AWS (Cognito, Amplify + S3)
                   </ListItem>
                   <ListItem className={classes.block}>     
                   <CheckIcon className={classes.info} />                                   

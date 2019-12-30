@@ -56,6 +56,7 @@ const infoStyle = {
   title: {
     color: "#3C4858",
     margin: "0.5rem 0 0.5rem",
+    fontSize: "1.2rem",
     textDecoration: "none",
     fontWeight: "700",
     fontFamily: `"Roboto Slab", "Times New Roman", serif`
@@ -64,31 +65,80 @@ const infoStyle = {
     color: grayColor,
     overflow: "hidden",
     marginTop: "0px",
-    fontSize: "16px"
+    fontSize: "1.125rem"
   },
   list: {
     marginBottom: "0",
     padding: "0",
     marginTop: "0"
   },
+  iconAbove: {
+    position: "absolute",
+    top: "-60px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    margin: "auto",
+    width: "100%",
+    textAlign: "center",
+    left: "0"
+  },
   iconWrapperVertical: {
-    float: "none",
     //background: "#41a5ff",
     background: primaryColor,
-    width: "125px",
-    height: "125px",
+    width: "115px",
+    height: "115px",
     justifyContent: "center",
     display: "flex",
     alignItems: "center",
     borderRadius: "50%",
     border: "5px solid white",
-    position: "absolute",
-    left: "115px",
-    top: "-115px"
+    textAlign: "center",
+    margin: "auto",
+    alignSelf: "center"
+    // "@media (max-width: 320px)": {
+    //   left: "85px",
+    // },
+    // "@media (min-width: 425px)": {
+    //   left: "140px",
+    // },
+    // "@media (max-width: 768px)": {
+    //   left: "280px",
+    // },
+    // "@media (max-width: 1024px)": {
+    //     left: "85px",
+    // }
+  },
+  iconWrapperVerticalSecondary: {
+    //background: "#41a5ff",
+    background: "#b773d6",
+    width: "115px",
+    height: "115px",
+    justifyContent: "center",
+    display: "flex",
+    alignItems: "center",
+    borderRadius: "50%",
+    border: "5px solid white",
+    textAlign: "center",
+    margin: "auto",
+    alignSelf: "center"
+
+    // "@media (max-width: 320px)": {
+    //   left: "85px",
+    // },
+    // "@media (min-width: 425px)": {
+    //   left: "140px",
+    // },
+    // "@media (max-width: 768px)": {
+    //   left: "280px",
+    // },
+    // "@media (max-width: 1024px)": {
+    //     left: "85px",
+    // }
   },
   iconVertical: {
-    width: "71px",
-    height: "71px"
+    width: "61px",
+    height: "61px"
   },
 };
 

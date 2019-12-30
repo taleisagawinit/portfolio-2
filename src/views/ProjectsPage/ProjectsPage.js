@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-
+import { Link } from "react-router-dom";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -17,9 +17,8 @@ import CardFooter from "components/Card/CardFooter.js";
 import Badge from "components/Badge/Badge.js";
 import CustomDialog from "components/CustomDialog/CustomDialog";
 import axios from 'axios';
-import styles from "assets/jss/material-kit-react/views/profilePage.js";
+import styles from "./profilePage.js";
 //const projects = require("projects.json");
-
 const useStyles = makeStyles(styles);
 
 export default function ProjectsPage(props) {
@@ -57,7 +56,7 @@ export default function ProjectsPage(props) {
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
-          height: 150,
+          height: 100,
           color: "white"
         }}
         {...rest}
@@ -65,10 +64,10 @@ export default function ProjectsPage(props) {
       <Parallax small>
         <div className={classes.container}>
           <GridContainer>
-            <GridItem xs={12} sm={12} md={6}>
+            <GridItem xs={12} sm={12} md={12}>
               <h1 className={classes.title}>Projects</h1>
               <h4>
-                Check out my projects
+                Here are some of my recent projects, check out all of them on my Github <Link to="/about">here</Link>
               </h4>
               <br />           
             </GridItem>
@@ -79,25 +78,25 @@ export default function ProjectsPage(props) {
         <div>
           <div className={classes.projContainer}>
             <GridContainer>
-            {projects ? projects.map(x => (
-            <GridItem key={x.id} xs={12} sm={12} md={4}>
+            {projects ? projects.sort((a, b)=> a.order-b.order).map(x => (
+            <GridItem key={x.id} xs={12} sm={6} md={4}>
               <Card>
-                <GridItem xs={12} sm={12} md={12} className={classes.itemGrid}>
-                  <img src={require("assets/img/bb8.jpg")} onClick={() => toggleModal(x)} alt="..." className={imageClasses} />
-                  
-                </GridItem>
-                <h4 className={classes.cardTitle}>
-                  {x.title}
-                  <br />
-                  <small className={classes.smallTitle}>{x.subtitle}</small>
-                </h4>
-                <CardBody>
-                  <p className={classes.description}>
-                    {x.desc}
-                  </p>
-                </CardBody>
+                <GridItem xs={12} sm={12} md={12} className={classes.itemGrid} onClick={() => toggleModal(x)}>
+                  <div className={classes.cardHeader}>
+                    <h4 className={classes.cardTitle}>
+                      {x.title}
+                      <br />
+                      <small className={classes.smallTitle}>{x.subtitle}</small>
+                    </h4>
+                  </div>
+                  <div className={classes.cardContent}>
+                    <p className={classes.description}>
+                      {x.desc}
+                    </p>
+                  </div>
+                </GridItem>                
                 <CardFooter className={classes.justifyCenter}>
-                  {x.tags ? x.tags.map(y => <Badge key={y} color="primary">{y}</Badge>) : null}
+                  {x.tags ? x.tags.map(y => <Badge key={y} className={classes.badge} color="primary">{y}</Badge>) : null}
                 </CardFooter>
               </Card>
             </GridItem>

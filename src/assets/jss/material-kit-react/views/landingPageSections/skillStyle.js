@@ -20,7 +20,8 @@ const productStyle = {
   },
   infoCard: {
     marginTop: "115px",
-    paddingTop: "30px"
+    paddingTop: "70px",
+    paddingBottom: "30px"
   }
   
 };

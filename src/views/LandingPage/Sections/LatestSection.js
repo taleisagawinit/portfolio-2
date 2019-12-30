@@ -1,76 +1,141 @@
 import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import Carousel from "react-slick";
-import LocationOn from "@material-ui/icons/LocationOn";
+import { List, ListItem } from "@material-ui/core";
+import { Link } from 'react-router-dom';
+// @material-ui/icons
+import WorkOutline from "@material-ui/icons/WorkOutline";
+import Event from "@material-ui/icons/Event";
+import PlayArrow from "@material-ui/icons/PlayArrow";
+import ChevronRight from '@material-ui/icons/ChevronRight';
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
+import InfoArea from "components/InfoArea/InfoArea.js";
 import Card from "components/Card/Card.js";
-import styles from "assets/jss/material-kit-react/views/landingPageSections/latestStyle.js";
-
+import styles from "assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
 const useStyles = makeStyles(styles);
 
-export default function LatestSection() {
+export default function SkillSection() {
   const classes = useStyles();
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false
-  };
   return (
     <div className={classes.section}>
-      <h2 className={classes.title}>In The Works</h2>
+      <GridContainer justify="center">
+        <GridItem xs={12} sm={12} md={8}>
+          <h2 className={classes.title}>In The Works</h2>
+          <h4 className={classes.description}>Here's a summary of what I'm currently working on, which events I'll be at and what I've been listening to while I work. Join me at the next Meetup or <Link to="/contact">connect</Link> to work together!  
+          </h4>
+        </GridItem>
+      </GridContainer>
       <div>
-        <GridContainer className={classes.cardSection} justify="center">
-          <GridItem xs={12} sm={12} md={10}>
-            <Card carousel>
-              <Carousel {...settings}>
+        <GridContainer>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card className={classes.infoCard}>
+            <InfoArea
+              title="WIP Project: RMA Admin"
+              description={
                 <div>
-                  <img src={require("assets/img/bb8.jpg")} alt="First slide" className="slick-image" />
-                  <div className="slick-caption">
-                    <h3>Meetup With Me</h3>
-                    <h4>
-                      <LocationOn className="slick-icons" />
-                      Las Vegas, NV
-                    </h4>
-                  </div>
+                <List className={classes.list}>
+                  <ListItem className={classes.block}>
+                  <ChevronRight className={classes.info} />                   
+                    PWA for a local business
+                  </ListItem>
+                  <ListItem className={classes.block}>
+                  <ChevronRight className={classes.info} />                                        
+                    Improving employee communication
+                  </ListItem>
+                  <ListItem className={classes.block}>
+                  <ChevronRight className={classes.info} />                                        
+                    Improving client management
+                  </ListItem>
+                  <ListItem className={classes.block}>
+                  <ChevronRight className={classes.info} />                                      
+                    Frontend: React
+                  </ListItem>
+                  <ListItem className={classes.block}>  
+                  <ChevronRight className={classes.info} />                                      
+                    Backend: Firebase
+                  </ListItem>
+                </List>
                 </div>
-                <div>
-                  <img
-                    src={require("assets/img/bb8.jpg")}
-                    alt="Second slide"
-                    className="slick-image"
-                  />
-                  <div className="slick-caption">
-                    <h3>Latest Project</h3>
-                    <h4>
-                      <LocationOn className="slick-icons" />
-                      A Web app for a local business
-                    </h4>
-                  </div>
-                </div>
-                <div>
-                  <img src={require("assets/img/bb8.jpg")} alt="First slide" className="slick-image" />
-                  <div className="slick-caption">
-                    <h3>Currently Coding To</h3>
-                    <h4>
-                      <LocationOn className="slick-icons" />
-                      Lofi playlist subtitle
-                    </h4>
-                  </div>
-                {/* <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/476769048&color=%2300acc1&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> */}
-                  
-                </div>
-              </Carousel>
+              }
+              icon={WorkOutline}
+              iconColor="gray"
+              vertical
+              secondary
+            />
             </Card>
           </GridItem>
-          {/* <GridItem xs={12} sm={12} md={6}>
-            <Card>Section here</Card>
-          </GridItem> */}
+          <GridItem xs={12} sm={12} md={4}>
+          <Card className={classes.infoCard}>
+            <InfoArea
+              title="Meetup With Me"
+              description={
+                <List className={classes.list}>
+                  <ListItem className={classes.block}>
+                  <ChevronRight className={classes.info} />                   
+                    <a href="#" target="_blank">Demo Day (1/12)</a>
+                  </ListItem>
+                  <ListItem className={classes.block}>
+                  <ChevronRight className={classes.info} />                                        
+                    <a href="#" target="_blank">Agile (1/7)</a>
+                  </ListItem>
+                  <ListItem className={classes.block}>
+                  <ChevronRight className={classes.info} />                                      
+                    <a href="#" target="_blank">React Vegas (1/14)</a>
+                  </ListItem>
+                  <ListItem className={classes.block}>  
+                  <ChevronRight className={classes.info} />                                      
+                    <a href="#" target="_blank">SYN Shop (1/20)</a>
+                  </ListItem>
+                  <ListItem className={classes.block}>     
+                  <ChevronRight className={classes.info} />                                   
+                    <a href="#" target="_blank">IGDA (1/22)</a>
+                  </ListItem>
+                </List>
+              }
+              icon={Event}
+              iconColor="gray"
+              vertical
+              secondary
+            />
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+          <Card className={classes.infoCard}>
+            <InfoArea
+              title="Coding To"
+              description={
+                <List className={classes.list}>
+                  <ListItem className={classes.block}>
+                  <ChevronRight className={classes.info} />                   
+                    <a href="https://soundcloud.com/sugiwa/urtha1" target="_blank">Urtha1</a>
+                  </ListItem>
+                  <ListItem className={classes.block}>
+                  <ChevronRight className={classes.info} />                                        
+                    <a href="https://soundcloud.com/gavinturek/2am-1" target="_blank">2AM</a>
+                  </ListItem>
+                  <ListItem className={classes.block}>
+                  <ChevronRight className={classes.info} />                                      
+                    <a href="https://soundcloud.com/primabeats/june-gloom-1" target="_blank">June Gloom</a>
+                  </ListItem>
+                  <ListItem className={classes.block}>  
+                  <ChevronRight className={classes.info} />                                      
+                    <a href="https://open.spotify.com/playlist/1HnrBuUgBYw7E67Rie2vN8" target="_blank">Spotify</a>
+                  </ListItem>
+                  <ListItem className={classes.block}>     
+                  <ChevronRight className={classes.info} />                                   
+                    <a href="https://www.youtube.com/watch?v=hHW1oY26kxQ" target="_blank">Lofi Radio</a>
+                  </ListItem>
+                </List>
+              }
+              icon={PlayArrow}
+              iconColor="gray"
+              vertical
+              secondary
+            />
+            </Card>
+          </GridItem>
         </GridContainer>
       </div>
     </div>

@@ -1,47 +1,29 @@
-import { container, title, mainRaised } from "assets/jss/material-kit-react.js";
+import { title, primaryColor } from "assets/jss/material-kit-react.js";
 
-const workStyle = {
-  container: {
-    zIndex: "12",
-    color: "#FFFFFF",
-    ...container
-  },
-  projContainer: {
-    padding: "70px 0",
-    zIndex: "12",
-    color: "#FFFFFF",
-    textAlign: "center",
-    ...container
-  },
+const productStyle = {
   section: {
-    padding: "70px 0"
+    textAlign: "center"
   },
   title: {
     ...title,
-    display: "inline-block",
-    position: "relative",
+    marginBottom: "1rem",
     marginTop: "30px",
     minHeight: "32px",
-    textDecoration: "none",
-    color: "#FFFFFF"
+    textDecoration: "none"
   },
   description: {
-    color: "#999",
-    textAlign: "center"
+    color: "#999"
   },
-  textCenter: {
-    textAlign: "center"
+  info: {
+    color: "#b773d6",
+    marginRight: "0.25rem"
   },
-  textArea: {
-    marginRight: "15px",
-    marginLeft: "15px"
-  },
-  main: {
-    background: "#FFFFFF",
-    position: "relative",
-    zIndex: "3"
-  },
-  mainRaised
+  infoCard: {
+    marginTop: "115px",
+    paddingTop: "70px",
+    paddingBottom: "30px"
+  }
+  
 };
 
-export default workStyle;
+export default productStyle;

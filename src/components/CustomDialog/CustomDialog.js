@@ -12,7 +12,7 @@ import Zoom from "@material-ui/core/Zoom";
 import IconButton from "@material-ui/core/IconButton";
 import Close from "@material-ui/icons/Close";
 import Carousel from "react-slick";
-import styles from "assets/jss/material-kit-react/views/profilePage.js";
+import styles from "../../views/ProjectsPage/profilePage.js";
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Zoom direction="down" ref={ref} {...props} />;
 });

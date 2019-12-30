@@ -12,11 +12,12 @@ const useStyles = makeStyles(styles);
 
 export default function InfoArea(props) {
   const classes = useStyles();
-  const { title, description, iconColor, vertical } = props;
+  const { title, description, iconColor, vertical, secondary } = props;
   const iconWrapper = classNames({
     [classes.iconWrapper]: true,
     [classes[iconColor]]: true,
-    [classes.iconWrapperVertical]: vertical
+    [classes.iconWrapperVertical]: vertical,
+    [classes.iconWrapperVerticalSecondary]: secondary
   });
   const iconClasses = classNames({
     [classes.icon]: true,
@@ -24,8 +25,10 @@ export default function InfoArea(props) {
   });
   return (
     <div className={classes.infoArea}>
-      <div className={iconWrapper}>
+      <div className={classes.iconAbove}>
+        <div className={iconWrapper}>
         <props.icon className={iconClasses} />
+        </div>
       </div>
       <div className={classes.descriptionWrapper}>
         <h4 className={classes.title}>{title}</h4>
@@ -52,5 +55,6 @@ InfoArea.propTypes = {
     "rose",
     "gray"
   ]),
-  vertical: PropTypes.bool
+  vertical: PropTypes.bool,
+  secondary: PropTypes.bool
 };

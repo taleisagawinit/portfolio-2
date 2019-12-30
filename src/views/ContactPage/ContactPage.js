@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 // @material-ui/icons
 import Check from "@material-ui/icons/Check";
 import Warning from "@material-ui/icons/Warning";
@@ -18,7 +19,7 @@ import Footer from "components/Footer/Footer.js";
 //check that form is valid
 import validator from 'validator'
 
-import styles from "assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
+import styles from "./contactStyle.js";
 
 const useStyles = makeStyles(styles);
 
@@ -75,7 +76,7 @@ export default function ContactPage(props) {
   function handleChange(e) { 
     setValues({ ...values, [e.target.name]: e.target.value });
   }
-
+//padding: 0 20px;
   return (
     <div>
       <Header
@@ -92,10 +93,10 @@ export default function ContactPage(props) {
       <Parallax small>
         <div className={classes.container}>
           <GridContainer>
-            <GridItem xs={12} sm={12} md={6}>
+            <GridItem xs={12} sm={12} md={12}>
               <h1 className={classes.title}>Contact</h1>
               <h4>
-                Feedback? Comments? Hiring? Send me a message to connect!
+                Feedback? Comments? Hiring? Send me a message to connect! I'm also available on <Link to="/about">LinkedIn</Link>
               </h4>
               <br />           
             </GridItem>

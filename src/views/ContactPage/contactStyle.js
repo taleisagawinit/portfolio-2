@@ -4,7 +4,7 @@ import imagesStyle from "assets/jss/material-kit-react/imagesStyles.js";
 import modalStyle from "assets/jss/material-kit-react/modalStyle.js";
 
 
-const profilePageStyle = {
+const contactStyle = {
   container: {
     zIndex: "12",
     color: "#FFFFFF",
@@ -38,11 +38,13 @@ const profilePageStyle = {
   ...imagesStyle,
   itemGrid: {
     marginLeft: "auto",
-    marginRight: "auto"
+    marginRight: "auto",
   },
+  
   cardTitle,
   smallTitle: {
-    color: "#6c757d"
+    color: "#6c757d",
+    textTransform: "capitalize"
   },
   main: {
     background: "#FFFFFF",
@@ -58,8 +60,12 @@ const profilePageStyle = {
     marginTop: "30px",
     minHeight: "32px",
     textDecoration: "none",
-    color: "#FFFFFF"
+    color: "#FFFFFF",
+  "-webkit-text-fill-color": "transparent", /* Will override color (regardless of order) */
+  "-webkit-text-stroke-width": "1px",
+  "-webkit-text-stroke-color": "#FFF"
   },
+  
   socials: {
     marginTop: "0",
     width: "100%",
@@ -80,7 +86,8 @@ const profilePageStyle = {
   },
   margin5: {
     margin: "5px"
-  }
+  },
+  
 };
 
-export default profilePageStyle;
+export default contactStyle;

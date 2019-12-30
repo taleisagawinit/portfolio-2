@@ -37,7 +37,8 @@ const imagesStyles = {
     right: "0",
     bottom: "0",
     left: "0",
-    padding: "1.25rem"
+    padding: "1.25rem",
+      background: "rgba(0, 0, 0, 0.2)",
   }
 };
 
