@@ -28,10 +28,10 @@ const landingPageStyle = {
     //left: 0,
     margin: "0 10px",
     cursor: "pointer",
-    "&:hover + $engTitle": {
+    "&:hover + $engTitle, &:hover + $engTitle": {
       display: "inline-block",
      },
-     "&:hover + $engTitle + $title": {
+     "&:hover + $engTitle + $title, &:focus + $engTitle + $title": {
       display: "none",
      },
   //   "&:hover + $engTitle": {
@@ -42,7 +42,7 @@ const landingPageStyle = {
   },
   heading: {
     display: "flex",
-    //alignItems: "flex-start"
+    alignItems: "center"
   },
   iconClass: {
     fontSize: "20px"

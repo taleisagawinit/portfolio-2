@@ -18,6 +18,7 @@ import Badge from "components/Badge/Badge.js";
 import CustomDialog from "components/CustomDialog/CustomDialog";
 import axios from 'axios';
 import styles from "./profilePage.js";
+import { Button } from "@material-ui/core";
 //const projects = require("projects.json");
 const useStyles = makeStyles(styles);
 
@@ -81,7 +82,7 @@ export default function ProjectsPage(props) {
             {projects ? projects.sort((a, b)=> a.order-b.order).map(x => (
             <GridItem key={x.id} xs={12} sm={6} md={4}>
               <Card>
-                <GridItem xs={12} sm={12} md={12} className={classes.itemGrid} onClick={() => toggleModal(x)}>
+                <GridItem xs={12} sm={12} md={12} className={classes.itemGrid}>
                   <div className={classes.cardHeader}>
                     <h4 className={classes.cardTitle}>
                       {x.title}
@@ -93,6 +94,7 @@ export default function ProjectsPage(props) {
                     <p className={classes.description}>
                       {x.desc}
                     </p>
+                    <Button onClick={() => toggleModal(x)}>Details</Button>
                   </div>
                 </GridItem>                
                 <CardFooter className={classes.justifyCenter}>
