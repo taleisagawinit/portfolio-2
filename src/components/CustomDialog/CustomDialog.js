@@ -64,20 +64,16 @@ export default function CustomDialog(props) {
         id="classic-modal-slide-description"
         className={classes.modalBody}
         >
-        <Card carousel>
+        <Card className={classes.cardCarousel} carousel>
             <Carousel {...settings}>
             <div>
-                <img src={require("assets/img/bb8.jpg")} alt="First slide" className="slick-image" />
+                <img src={require("assets/img/" + props.item.slug + "/1.png")} alt="First slide" className={"slick-image", classes.images} />
             </div>
             <div>
-                <img
-                src={require("assets/img/bb8.jpg")}
-                alt="Second slide"
-                className="slick-image"
-                />
+                <img src={require("assets/img/" + props.item.slug + "/2.png")} alt="Second slide" className={"slick-image", classes.images}/>
             </div>
             <div>
-                <img src={require("assets/img/bb8.jpg")} alt="First slide" className="slick-image" />                         
+                <img src={require("assets/img/" + props.item.slug + "/3.png")} alt="First slide" className={"slick-image", classes.images} />                         
             </div>
             </Carousel>                     
         </Card>

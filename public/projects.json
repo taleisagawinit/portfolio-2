@@ -4,7 +4,7 @@
     "title": "Kana",
     "url": "https://github.com/mierome16/kana-app",
     "desc": "A food web app to quickly and easily decide what you want to eat. It's like tinder, but for food! Developed over 2 weeks in a team of 3. Currently using React Native to redo the application to eventually deploy live",
-    "tags": ["react/redux", "node/express", "mysql"],
+    "tags": ["react/redux", "node", "mysql"],
     "subtitle": "food service app",
     "order": 3,
     "slug": "kana"
@@ -13,7 +13,7 @@
     "id": 2,
     "title": "To-Do",
     "url": "https://github.com/taleisagawinit/react-todo",
-    "desc": "A simple personalized to-do list created to keep track of my daily tasks",
+    "desc": "A personalized to-do list created to keep track of my daily tasks",
     "tags": ["react/redux"],
     "subtitle": "productivity app",
     "order": 5,
@@ -34,7 +34,7 @@
     "title": "365",
     "url": "",
     "desc": "A mobile app developed for a new local business, to encourage all people to try new activities and adventures. Uses Tinder-style swiping to find things to do and win awards for completing them",
-    "tags": ["react native", "node/express", "mongoDB", "AWS"],
+    "tags": ["react native", "node", "mongoDB", "AWS"],
     "subtitle": "social app",
     "order": 2,
     "slug": "365"
@@ -44,7 +44,7 @@
     "title": "RMA Admin",
     "url": "https://github.com/taleisagawinit/resApp",
     "desc": "A PWA created for a local business to improve client and employee management and communication",
-    "tags": ["react/redux", "node/express", "firebase"],
+    "tags": ["react/redux", "node", "firebase"],
     "subtitle": "admin app",
     "order": 1,
     "slug": "rma"

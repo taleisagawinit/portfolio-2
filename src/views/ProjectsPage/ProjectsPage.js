@@ -90,11 +90,10 @@ export default function ProjectsPage(props) {
                       <small className={classes.smallTitle}>{x.subtitle}</small>
                     </h4>
                   </div>
-                  <div className={classes.cardContent}>
+                  <div onClick={() => toggleModal(x)} className={classes.cardContent}>
                     <p className={classes.description}>
                       {x.desc}
                     </p>
-                    <Button onClick={() => toggleModal(x)}>Details</Button>
                   </div>
                 </GridItem>                
                 <CardFooter className={classes.justifyCenter}>

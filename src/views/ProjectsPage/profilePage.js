@@ -31,10 +31,15 @@ const profilePageStyle = {
     maxWidth: "600px",
     fontSize: "1.125rem",
     color: "#fff",
-    textAlign: "center !important"
+    textAlign: "center !important",
+    cursor: "pointer",
+    zIndex: "10"
   },
   name: {
     marginTop: "-80px"
+  },
+  images: {
+    maxHeight: "300px"
   },
   ...imagesStyle,
   itemGrid: {
@@ -51,7 +56,9 @@ const profilePageStyle = {
     backgroundSize: "100%",
     backgroundPosition: "center",
     transition: "0.5s",
-    //opacity: 1,
+    opacity: 1,
+    cursor: "pointer",
+    
     // "&:after": {
     //   background: "rgba(0, 0, 0, 0.2)",
     //   position: "absolute",
@@ -64,19 +71,19 @@ const profilePageStyle = {
     //   content: "''"
     // },
   
-    "&:hover, &:focus": {
+    "&:hover, &:active": {
       //backgroundImage: "url(" + require('assets/img/bb8.jpg') + ")",
       //backgroundImage: "linear-gradient(to right top, #808080a6, #00000054)"
       backgroundSize: "110%",
       //opacity: 0.2
 
     },
-    "&:hover $cardContent, &:focus $cardContent": {
+    "&:hover $cardContent, &:active $cardContent": {
       top: "0",
       opacity: 1
     },
-    "&:hover $cardHeader, &:focus $cardHeader": {
-      opacity: 0.2
+    "&:hover $cardHeader, &:active $cardHeader": {
+      opacity: 0,
     }
   },
 
@@ -94,7 +101,8 @@ const profilePageStyle = {
     padding: "10px",
     display: "flex",
     justifyContent: "center",
-    flexDirection: "column"
+    flexDirection: "column",
+    cursor: "pointer"
   },
   cardHeader: {
     opacity: 1,
@@ -113,6 +121,10 @@ const profilePageStyle = {
   },
   mainRaised,
   ...modalStyle,
+  cardCarousel: {
+    width: "inherit",
+    height: "inherit"
+  },
   title: {
     ...title,
     display: "inline-block",
