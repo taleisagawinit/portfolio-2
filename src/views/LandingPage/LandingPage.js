@@ -45,6 +45,7 @@ export default function LandingPage(props) {
       <Header
         color="transparent"
         routes={dashboardRoutes}
+        // brand={<img src={require("assets/img/taleilogo.png")} style={{width: "50px"}} alt="..."/>}
         brand=""
         rightLinks={<HeaderLinks />}
         fixed
