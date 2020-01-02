@@ -61,7 +61,11 @@ export default function CustomDialog(props) {
         disableTypography
         className={classes.modalHeader}
         >
-        {props.item.title}
+            { loading ? (
+                <Skeleton animation="wave" width={190} style={{backgroundColor: "#708ce524"}}/>
+                ) :
+                props.item.title
+            }
         <IconButton
             className={classes.modalCloseButton}
             key="close"
@@ -77,7 +81,7 @@ export default function CustomDialog(props) {
         >
             <Card className={classes.cardCarousel} carousel>
                 { loading ? (
-                <Skeleton variant="rect" animation="wave" height={190} style={{backgroundColor: "#708ce524"}}/>
+                <Skeleton variant="rect" animation="wave" width={490} height={290} style={{backgroundColor: "#708ce524"}}/>
                 ) :
                 <Carousel {...settings}>
                     {props.item.imgs ? props.item.imgs.map(x => 
@@ -89,7 +93,11 @@ export default function CustomDialog(props) {
                 }             
             </Card>
             <p>
-                {props.item.desc + props.item.fullDesc}
+            { loading ? (
+                <Skeleton animation="wave" width={290} style={{backgroundColor: "#708ce524"}}/>
+                ) :
+                props.item.desc + props.item.fullDesc
+            }
             </p>       
         </DialogContent>
         <DialogActions className={classes.modalFooter}>
