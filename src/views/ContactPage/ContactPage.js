@@ -81,7 +81,7 @@ export default function ContactPage(props) {
     <div>
       <Header
         color="transparent"
-        brand="talei pono"
+        brand=""
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{

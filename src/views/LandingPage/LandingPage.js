@@ -45,7 +45,7 @@ export default function LandingPage(props) {
       <Header
         color="transparent"
         routes={dashboardRoutes}
-        brand="talei pono"
+        brand=""
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
