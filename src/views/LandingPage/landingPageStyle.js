@@ -28,6 +28,9 @@ const landingPageStyle = {
     //left: 0,
     margin: "0 10px",
     cursor: "pointer",
+    "&:hover": {
+      opacity: "0.6",
+    },
     "&:hover + $engTitle, &:hover + $engTitle": {
       display: "inline-block",
      },
@@ -45,7 +48,8 @@ const landingPageStyle = {
     alignItems: "center"
   },
   iconClass: {
-    fontSize: "20px"
+    fontSize: "20px",
+
   },
   title: {
     ...title,

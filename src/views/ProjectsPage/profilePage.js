@@ -30,7 +30,7 @@ const profilePageStyle = {
   description: {
     maxWidth: "600px",
     fontSize: "1.125rem",
-    color: "#fff",
+    color: "#3C4858",
     textAlign: "center !important",
     cursor: "pointer",
     zIndex: "10"
@@ -41,60 +41,74 @@ const profilePageStyle = {
   images: {
     maxHeight: "300px"
   },
+  mobileContent: {
+    position: "absolute",
+    top: "0",
+    left: "0",
+    zIndex: "100",
+    width: "100%",
+    height: "100%"
+  },
   ...imagesStyle,
   itemGrid: {
     marginLeft: "auto",
     marginRight: "auto",
-    minHeight: "200px",
+    minHeight: "225px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     overflow: "hidden",
     position: "relative",
-    // backgroundImage: "linear-gradient(to right top, #ffc7a5, #ffb59f, #ffa2a4, #ff90b1, #fd83c6, #ef7ed3, #dd7ce1, #c47cee, #b47cf3, #a27cf7, #8e7cfb, #757dfe)",
-    backgroundImage: "url('https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80')",
-    backgroundSize: "100%",
+    //backgroundImage: "url('https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80')",
+    backgroundSize: "110%",
     backgroundPosition: "center",
     transition: "0.5s",
     opacity: 1,
     cursor: "pointer",
-    
-    // "&:after": {
-    //   background: "rgba(0, 0, 0, 0.2)",
-    //   position: "absolute",
-    //   // zIndex: "1",
-    //   width: "100%",
-    //   height: "100%",
-    //   display: "block",
-    //   left: "0",
-    //   top: "0",
-    //   content: "''"
+
+    // kana: {
+    //   backgroundImage: "url(" + require("assets/img/kana/1.png") + ")"
     // },
   
-    "&:hover, &:active": {
-      //backgroundImage: "url(" + require('assets/img/bb8.jpg') + ")",
-      //backgroundImage: "linear-gradient(to right top, #808080a6, #00000054)"
-      backgroundSize: "110%",
-      //opacity: 0.2
+    "&:hover, &:focus": {
+      backgroundImage: "url(" + require("assets/img/1.png") + ")",
+      backgroundSize: "120%",
 
     },
-    "&:hover $cardContent, &:active $cardContent": {
+    "&:hover $cardContent, &:focus $cardContent": {
       top: "0",
       opacity: 1
     },
-    "&:hover $cardHeader, &:active $cardHeader": {
+    "&:hover $cardHeader, &:focus $cardHeader": {
       opacity: 0,
     }
   },
+  btn: {
+    textDecoration: "none",
 
+    "&:hover": {
+      background: "rgba(200, 200, 200, 0.2)"
+    }
+  },
+  noUnderline: {
+    textDecoration: "none",
+    display: "flex",
+    alignItems: "center",
+    "&:hover": {
+      color: "inherit"
+    }
+  },
+  github: {
+    marginLeft: "4px"
+  },
   cardContent: {
     position: 'absolute',
-    top: "100%",
+    //top: "100%",
     left: "0",
     width: "100%",
     height: "100%",
-    //background: "rgba(0,0,0,0.6)",
-    background: "#7089e5b8",
+    backgroundImage: "url(" + require("assets/img/1.png") + ")",
+    backgroundSize: "110%",
     opacity: 0,
     transition: "0.5s",
     overflow: "hidden",
@@ -109,7 +123,11 @@ const profilePageStyle = {
     zIndex: 1,
     transition: "0.5s"
   },
-  cardTitle,
+  cardTitle: {
+    ...cardTitle,
+    margin: "0.15rem",
+    lineHeight: "inherit"
+  },
   smallTitle: {
     color: "#6c757d",
     textTransform: "capitalize"
@@ -137,7 +155,13 @@ const profilePageStyle = {
   "-webkit-text-stroke-width": "1px",
   "-webkit-text-stroke-color": "#FFF"
   },
-  
+  selected: {
+    marginBottom: "50%",
+    overflow: 'auto'
+  },
+  mobileContent: {
+    top: "100%"
+  },
   socials: {
     marginTop: "0",
     width: "100%",
@@ -154,6 +178,10 @@ const profilePageStyle = {
     textAlign: "center"
   },
   justifyCenter: {
+    //paddingBottom: "0.25rem",
+    paddingTop: "0",
+    paddingRight: "0",
+    paddingLeft: "0",
     justifyContent: "center",
     flexWrap: "wrap",
   },

@@ -14,7 +14,7 @@ import GridItem from "components/Grid/GridItem.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 import Tooltip from "@material-ui/core/Tooltip";
-
+import Skeleton from '@material-ui/lab/Skeleton';
 import styles from "./landingPageStyle";
 
 // Sections for this page
@@ -28,7 +28,7 @@ const useStyles = makeStyles(styles);
 
 export default function LandingPage(props) {
   const classes = useStyles();
-  const { ...rest } = props;
+  //const { ...rest } = props;
   const imageClasses = classNames(
     classes.imgRaised,
     classes.imgRoundedCircle,
@@ -52,7 +52,7 @@ export default function LandingPage(props) {
           height: 100,
           color: "white"
         }}
-        {...rest}
+        //{...rest}
       />
       {/* "linear-gradient(to right bottom, rgb(220, 61, 198), rgb(112, 137, 229))" */}
       <Parallax>
@@ -60,6 +60,7 @@ export default function LandingPage(props) {
           <GridContainer justify="center">
             <GridItem xs={8} sm={4} md={3}>
               <img src={require("assets/img/profile.jpg")} className={imageClasses} alt="..."/>
+              {/* <Skeleton variant="circle" animation="wave" width={40} height={40} /> */}
             </GridItem>
             <GridItem xs={12} sm={12} md={9} >
               <div className={classes.heading}>

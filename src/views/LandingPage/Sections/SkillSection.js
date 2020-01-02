@@ -42,11 +42,11 @@ export default function SkillSection() {
                   </ListItem>
                   <ListItem className={classes.block}>
                   <CheckIcon className={classes.info} />                                        
-                    CSS
+                    CSS/SCSS
                   </ListItem>
                   <ListItem className={classes.block}>
                   <CheckIcon className={classes.info} />                                      
-                    JavaScript + jQuery
+                    jQuery
                   </ListItem>
                   <ListItem className={classes.block}>  
                   <CheckIcon className={classes.info} />                                      

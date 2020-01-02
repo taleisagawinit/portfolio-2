@@ -1,0 +1,128 @@
+{
+  "projects":[
+     {
+        "id":1,
+        "title":"Kana",
+        "url":"https://github.com/mierome16/kana-app",
+        "desc":"A food web app to quickly and easily decide what you want to eat. It's like tinder, but for food!",
+        "fullDesc": " Developed over 2 weeks in a team of 3. Currently using React Native to redo the application to eventually deploy live",
+        "tags":[
+           "react/redux",
+           "node",
+           "mysql"
+        ],
+        "subtitle":"food service app",
+        "order":3,
+        "slug":"kana",
+        "imgs": ["1.png", "2.png", "3.png"]
+     },
+     {
+        "id":2,
+        "title":"To-Do",
+        "url":"https://github.com/taleisagawinit/react-todo",
+        "desc":"A personalized to-do list created to keep track of my daily tasks",
+        "fullDesc": " ",
+        "tags":[
+           "react/redux"
+        ],
+        "subtitle":"productivity app",
+        "order":5,
+        "slug":"todo",
+        "imgs": ["1.png"]
+     },
+     {
+        "id":3,
+        "title":"Memory: The Office Edition",
+        "url":"https://github.com/taleisagawinit/memory",
+        "desc":"An Office (TV show) themed memory game.",
+        "fullDesc": " Try to match all the cards with using the least amount of 'Tobys' (aka moves/turns)",
+        "tags":[
+           "JavaScript",
+           "jQuery"
+        ],
+        "subtitle":"jquery game",
+        "order":4,
+        "slug":"memory",
+        "imgs": ["1.png", "2.png", "3.png"]
+     },
+     {
+        "id":4,
+        "title":"365",
+        "url":"",
+        "desc":"A mobile app developed for a new local business, to encourage all people to try new activities and adventures.",
+        "fullDesc": " Uses Tinder-style swiping to find things to do and win awards for completing them.",
+        "tags":[
+           "react native",
+           "node",
+           "mongoDB",
+           "AWS"
+        ],
+        "subtitle":"social app",
+        "order":2,
+        "slug":"365",
+        "imgs": ["1.png", "2.png", "3.png"]
+     },
+     {
+        "id":5,
+        "title":"RMA Admin",
+        "url":"https://github.com/taleisagawinit/resApp",
+        "desc":"A PWA created for a local business to improve client and employee management and communication",
+        "fullDesc": " ",
+        "tags":[
+           "react/redux",
+           "node",
+           "firebase"
+        ],
+        "subtitle":"admin app",
+        "order":1,
+        "slug":"rma",
+        "imgs": ["1.png"]
+     },
+     {
+        "id":6,
+        "title":"Online Shop",
+        "url":"",
+        "desc":"A simple design of an online shop's webpage and shopping cart",
+        "fullDesc": " ",
+        "tags":[
+           "react/redux"
+        ],
+        "subtitle":"shopping cart",
+        "order":6,
+        "slug":"shop",
+        "imgs": ["1.png"]
+     }
+  ],
+  "meetups":[
+     {
+        "id":1,
+        "title":"Las Vegas Developers",
+        "url":"https://www.meetup.com/Las-Vegas-Developers/events/dzkhdrybccbpb/",
+        "date": 1
+     },
+     {
+        "id":2,
+        "title":"React Vegas",
+        "url":"https://www.meetup.com/ReactVegas/",
+        "date": 0
+     },
+     {
+        "id":3,
+        "title":"Las Vegas IGDA",
+        "url":"https://www.meetup.com/IGDA-Las-Vegas-Game-Development-Meetup/events/vbfxsqybccbkb/",
+        "date": 7
+     },
+     {
+        "id":4,
+        "title":"Agile NV",
+        "url":"https://www.meetup.com/AgileNV/events/266465324/",
+        "date": 15
+     },
+     {
+        "id":5,
+        "title":"Las Vegas UX/UI",
+        "url":"https://www.meetup.com/Las-Vegas-UX-UI/events/shpfmrybccbxb/",
+        "date": 18
+     }
+  ]
+}

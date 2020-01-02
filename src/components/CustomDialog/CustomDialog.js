@@ -2,6 +2,7 @@ import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // core components
+import { Link } from 'react-router-dom'
 import Button from "components/CustomButtons/Button.js";
 import Card from "components/Card/Card.js";
 import Dialog from "@material-ui/core/Dialog";
@@ -13,6 +14,14 @@ import IconButton from "@material-ui/core/IconButton";
 import Close from "@material-ui/icons/Close";
 import Carousel from "react-slick";
 import styles from "../../views/ProjectsPage/profilePage.js";
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
+import Hidden from '@material-ui/core/Hidden';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import Skeleton from '@material-ui/lab/Skeleton';
+
+
+
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Zoom direction="down" ref={ref} {...props} />;
 });
@@ -20,18 +29,21 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 const useStyles = makeStyles(styles);
 
 export default function CustomDialog(props) {
-  const classes = useStyles();
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false
-  };
+    const { loading = false } = props;
+    //Add skeleton for images while props are loading
+    const classes = useStyles();
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false
+    };
 
 
   return props.item ? (
+    <Hidden xsDown>
     <Dialog
         classes={{
         root: classes.center,
@@ -62,31 +74,33 @@ export default function CustomDialog(props) {
         </DialogTitle>
         <DialogContent
         id="classic-modal-slide-description"
-        className={classes.modalBody}
         >
-        <Card className={classes.cardCarousel} carousel>
-            <Carousel {...settings}>
-            <div>
-                <img src={require("assets/img/" + props.item.slug + "/1.png")} alt="First slide" className={"slick-image", classes.images} />
-            </div>
-            <div>
-                <img src={require("assets/img/" + props.item.slug + "/2.png")} alt="Second slide" className={"slick-image", classes.images}/>
-            </div>
-            <div>
-                <img src={require("assets/img/" + props.item.slug + "/3.png")} alt="First slide" className={"slick-image", classes.images} />                         
-            </div>
-            </Carousel>                     
-        </Card>
-        <p>
-            {props.item.desc}
-        </p>
+            <Card className={classes.cardCarousel} carousel>
+                { loading ? (
+                <Skeleton variant="rect" animation="wave" height={190} style={{backgroundColor: "#708ce524"}}/>
+                ) :
+                <Carousel {...settings}>
+                    {props.item.imgs ? props.item.imgs.map(x => 
+                        <div>
+                            <img src={require("assets/img/" + props.item.slug + "/" + x)} alt="First slide" className={"slick-image"} />
+                        </div>
+                    ) : null}
+                </Carousel>        
+                }             
+            </Card>
+            <p>
+                {props.item.desc + props.item.fullDesc}
+            </p>       
         </DialogContent>
         <DialogActions className={classes.modalFooter}>
-        <Button color="transparent" simple>
-            Nice Button
+        <Button color="transparent" className={classes.btn}>
+            <a className={classes.noUnderline} href={props.item.url} target="_blank" rel="noopener noreferrer">
+            View Source <GitHubIcon className={classes.github} />
+            </a>
         </Button>
         <Button
             onClick={props.toggle}
+            className={classes.btn}
             color="danger"
             simple
         >
@@ -94,5 +108,6 @@ export default function CustomDialog(props) {
         </Button>
         </DialogActions>
     </Dialog> 
+    </Hidden>
   ) : null
 }
