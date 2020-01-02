@@ -140,6 +140,13 @@ export default function ProjectsPage(props) {
                       </Carousel>                     
                     </Card>
                   </div> */}
+                  {x.featured ? 
+                  <div className={classes.featured}>                  
+                    <p className={classes.featuredContent}>
+                    Featured WIP
+                    </p>                  
+                  </div>
+                    : null}
                 </GridItem> 
                 <h4 className={classes.cardTitle}>
                       {x.title}

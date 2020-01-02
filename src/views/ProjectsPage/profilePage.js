@@ -79,7 +79,7 @@ const profilePageStyle = {
       top: "0",
       opacity: 1
     },
-    "&:hover $cardHeader, &:focus $cardHeader": {
+    "&:hover $featured, &:focus $featured": {
       opacity: 0,
     }
   },
@@ -185,8 +185,23 @@ const profilePageStyle = {
     justifyContent: "center",
     flexWrap: "wrap",
   },
+  featured: {
+    position: "absolute",
+    top: "20px",
+    left: "0",
+    background: "#7089e5",
+    padding: "0.5rem 1rem",
+    opacity: 1,
+    transition: "0.5s"
+  },
   margin5: {
     margin: "5px"
+  },
+  featuredContent: {
+    color: "#fff",
+    fontWeight: "700",
+    fontFamily: `"Roboto Slab", "Times New Roman", serif`,
+    margin: "0"
   }
 };
 
