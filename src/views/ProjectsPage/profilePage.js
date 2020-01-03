@@ -151,9 +151,9 @@ const profilePageStyle = {
     minHeight: "32px",
     textDecoration: "none",
     color: "#FFFFFF",
-  "-webkit-text-fill-color": "transparent", /* Will override color (regardless of order) */
-  "-webkit-text-stroke-width": "1px",
-  "-webkit-text-stroke-color": "#FFF"
+  // "-webkit-text-fill-color": "transparent", /* Will override color (regardless of order) */
+  // "-webkit-text-stroke-width": "1px",
+  // "-webkit-text-stroke-color": "#FFF"
   },
   selected: {
     marginBottom: "50%",
@@ -189,7 +189,7 @@ const profilePageStyle = {
     position: "absolute",
     top: "20px",
     left: "0",
-    background: "#7089e5",
+    background: "#619DDD",
     padding: "0.5rem 1rem",
     opacity: 1,
     transition: "0.5s"

@@ -8,6 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
+import Hidden from "@material-ui/core/Hidden";
 
 // core components
 import Button from "components/CustomButtons/Button.js";
@@ -69,6 +70,9 @@ export default function HeaderLinks(props) {
             className={classes.navLink}
           >
             <i className={classes.socialIcons + " far fa-envelope"} />
+            <Hidden mdUp>
+              <p>taleipono@gmail.com</p>
+            </Hidden>
           </Button>
         </Tooltip>
       </ListItem>
@@ -86,6 +90,9 @@ export default function HeaderLinks(props) {
             className={classes.navLink}
           >
             <i className={classes.socialIcons + " fab fab fa-github"} />
+            <Hidden mdUp>
+              <p>@taleisagawinit</p>
+            </Hidden>
           </Button>
         </Tooltip>
       </ListItem>
@@ -103,6 +110,9 @@ export default function HeaderLinks(props) {
             className={classes.navLink}
           >
             <i className={classes.socialIcons + " fab fa-linkedin-in"} />
+            <Hidden mdUp>
+              <p>Talei Sagawinit</p>
+            </Hidden>
           </Button>
         </Tooltip>
       </ListItem>

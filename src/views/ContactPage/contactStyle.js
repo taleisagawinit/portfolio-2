@@ -61,9 +61,9 @@ const contactStyle = {
     minHeight: "32px",
     textDecoration: "none",
     color: "#FFFFFF",
-  "-webkit-text-fill-color": "transparent", /* Will override color (regardless of order) */
-  "-webkit-text-stroke-width": "1px",
-  "-webkit-text-stroke-color": "#FFF"
+  // "-webkit-text-fill-color": "transparent", /* Will override color (regardless of order) */
+  // "-webkit-text-stroke-width": "1px",
+  // "-webkit-text-stroke-color": "#FFF"
   },
   
   socials: {

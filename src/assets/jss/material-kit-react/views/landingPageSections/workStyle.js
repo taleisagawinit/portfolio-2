@@ -15,7 +15,7 @@ const productStyle = {
     color: "#999"
   },
   info: {
-    color: "#b773d6",
+    color: "#fc86a3",
     marginRight: "0.25rem"
   },
   infoCard: {

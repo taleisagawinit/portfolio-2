@@ -85,7 +85,7 @@ const infoStyle = {
   },
   iconWrapperVertical: {
     //background: "#41a5ff",
-    background: primaryColor,
+    background: "#fc86a3",
     width: "115px",
     height: "115px",
     justifyContent: "center",
@@ -111,7 +111,7 @@ const infoStyle = {
   },
   iconWrapperVerticalSecondary: {
     //background: "#41a5ff",
-    background: "#b773d6",
+    background: "#fc86a3",
     width: "115px",
     height: "115px",
     justifyContent: "center",

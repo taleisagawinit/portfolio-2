@@ -48,7 +48,8 @@ export default function Parallax(props) {
       className={parallaxClasses}
       style={{
         ...style,
-        backgroundImage: "linear-gradient(to right top, #ffc7a5, #ffb59f, #ffa2a4, #ff90b1, #fd83c6, #ef7ed3, #dd7ce1, #c47cee, #b47cf3, #a27cf7, #8e7cfb, #757dfe)",
+        // backgroundImage: "linear-gradient(to right top, #ffc7a5, #ffb59f, #ffa2a4, #ff90b1, #fd83c6, #ef7ed3, #dd7ce1, #c47cee, #b47cf3, #a27cf7, #8e7cfb, #757dfe)",
+        backgroundImage: "url(" + require("assets/img/bgTest.png") + ")",
         transform: transform
       }}
     >

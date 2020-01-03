@@ -58,10 +58,10 @@ const landingPageStyle = {
     marginTop: "30px",
     minHeight: "32px",
     color: "#FFFFFF",
-    textDecoration: "none",
-    "-webkit-text-fill-color": "transparent", /* Will override color (regardless of order) */
-    "-webkit-text-stroke-width": "1px",
-    "-webkit-text-stroke-color": "#FFF",
+    // textDecoration: "none",
+    // "-webkit-text-fill-color": "transparent", /* Will override color (regardless of order) */
+    // "-webkit-text-stroke-width": "1px",
+    // "-webkit-text-stroke-color": "#FFF",
     
   },
   engTitle: {
@@ -72,9 +72,9 @@ const landingPageStyle = {
     minHeight: "32px",
     color: "#FFFFFF",
     textDecoration: "none",
-    "-webkit-text-fill-color": "transparent", /* Will override color (regardless of order) */
-    "-webkit-text-stroke-width": "1px",
-    "-webkit-text-stroke-color": "#FFF",
+    // "-webkit-text-fill-color": "transparent", /* Will override color (regardless of order) */
+    // "-webkit-text-stroke-width": "1px",
+    // "-webkit-text-stroke-color": "#FFF",
       
   },
   subtitle: {
