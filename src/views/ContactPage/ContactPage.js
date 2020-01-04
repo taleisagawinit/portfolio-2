@@ -16,9 +16,6 @@ import Button from "components/CustomButtons/Button.js";
 import Parallax from "components/Parallax/Parallax.js";
 import SnackbarContent from "components/Snackbar/SnackbarContent.js";
 import Footer from "components/Footer/Footer.js";
-import FormControl from "@material-ui/core/FormControl";
-import InputLabel from "@material-ui/core/InputLabel";
-import Input from "@material-ui/core/Input";
 //check that form is valid
 import validator from 'validator'
 
@@ -138,7 +135,7 @@ export default function ContactPage(props) {
             </GridItem> */}
             <GridItem xs={12} sm={12} md={12}>
             <form onSubmit={handleSubmit}>
-            <GridContainer>
+            <GridContainer className={classes.formMargin}>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
                   labelText="Your Name"
@@ -167,6 +164,7 @@ export default function ContactPage(props) {
                   }}
                 />
               </GridItem>
+              <GridItem xs={12} sm={12} md={12}>
               <CustomInput
                 labelText="Your Message"
                 id="message"
@@ -184,33 +182,14 @@ export default function ContactPage(props) {
                   rows: 5
                 }}
               />
-              <GridContainer justify="center">
-                <GridItem xs={12} sm={12} md={4} className={classes.textCenter}>
+              </GridItem>
+              {/* <GridContainer justify="center"> */}
+                <GridItem xs={12} sm={12} md={12} className={classes.textLeft}>
                   <Button type="submit" color="primary">Send Message</Button>
                 </GridItem>
-              </GridContainer>
+              {/* </GridContainer> */}
             </GridContainer>
           </form>
-          {/* <form onSubmit={handleSubmit}>
-          <p>
-            <InputLabel>
-              Your Name: <Input type="text" name="name" value={name} onChange={handleChange} />
-            </InputLabel>
-          </p>
-          <p>
-            <InputLabel>
-              Your Email: <Input type="email" name="email" value={email} onChange={handleChange} />
-            </InputLabel>
-          </p>
-          <p>
-            <InputLabel>
-              Message: <Input multiline name="message" value={message} onChange={handleChange} />
-            </InputLabel>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form> */}
           <form hidden onSubmit={handleSubmit}>
           <p>
             <label>

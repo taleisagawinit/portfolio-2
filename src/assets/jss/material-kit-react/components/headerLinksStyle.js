@@ -51,6 +51,7 @@ const headerLinksStyle = theme => ({
     "&:hover,&:focus": {
       color: "inherit",
       background: "rgba(200, 200, 200, 0.2)"
+      // #f53e7b33
     },
     [theme.breakpoints.down("sm")]: {
       width: "calc(100% - 30px)",

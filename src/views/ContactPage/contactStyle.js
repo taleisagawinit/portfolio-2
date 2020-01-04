@@ -87,6 +87,13 @@ const contactStyle = {
   margin5: {
     margin: "5px"
   },
+  textLeft: {
+    textAlign: "left"
+  },
+  formMargin: {
+    marginLeft: "10px",
+    marginRight: "10px"
+  }
   
 };
 
