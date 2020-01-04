@@ -16,6 +16,9 @@ import Button from "components/CustomButtons/Button.js";
 import Parallax from "components/Parallax/Parallax.js";
 import SnackbarContent from "components/Snackbar/SnackbarContent.js";
 import Footer from "components/Footer/Footer.js";
+import FormControl from "@material-ui/core/FormControl";
+import InputLabel from "@material-ui/core/InputLabel";
+import Input from "@material-ui/core/Input";
 //check that form is valid
 import validator from 'validator'
 
@@ -24,59 +27,58 @@ import styles from "./contactStyle.js";
 const useStyles = makeStyles(styles);
 
 export default function ContactPage(props) {
-  const [values, setValues] = useState({
-    email: '',
-    name: '',
-    message: ''
-  })
-  const [success, setSuccess] = useState(false)
-  const [emailSuccess, setEmailSuccess] = useState(false)
-  const [msgSuccess, setMsgSuccess] = useState(false)
-  const [error, setError] = useState(false)
   const classes = useStyles();
-  const { ...rest } = props;
 
-  React.useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  const [name,setName] = useState('');
+  const [status,setStatus] = useState('');
+  const [email,setEmail] = useState('');
+  const [message,setMessage] = useState('');
+  const [file, setFile] = useState({});
 
+ 
   const encode = (data) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
+    const formData = new FormData();
+    Object.keys(data).forEach((k)=>{
+      formData.append(k,data[k])
+    });
+    return formData
   }
 
-  function handleSubmit(e) {
-    if (validator.isEmail(values.email) && !validator.isEmpty(values.message)) {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", values })
-      })
-        .then(() => { setSuccess(true); setTimeout(() => setSuccess(false), 3000) })
-        .catch(err => alert(err));
+  const handleSubmit = e => {
+    const data = { "form-name": "contact", name, email, message }
+    
+    fetch("/", {
+      method: "POST",
+      // headers: { "Content-Type": 'multipart/form-data; boundary=random' },
+      body: encode(data)
+    })
+      .then(() => setStatus("Form Submission Successful!!"))
+      .catch(error => setStatus("Form Submission Failed!"));
 
-    } else {
-      setError(true); setTimeout(() => setError(false), 3000) 
-    }
-    //TODO: add logic to add success/error/validation messages
-    clearTimeout();
     e.preventDefault();
-  } 
+  };
 
-  function checkEmail() {
-    validator.isEmail(values.email) ? setEmailSuccess(false) : setEmailSuccess(true)
+  const handleChange = e => {
+    const {name, value} = e.target
+    if (name === 'name' ){
+      return setName(value)
+    }
+    if (name === 'email' ){
+      return setEmail(value)
+    }
+    if (name === 'message' ){
+      return setMessage(value)
+    }
   }
 
-  function checkMsg() {
-    !validator.isEmpty(values.message) ? setMsgSuccess(false) : setMsgSuccess(true)
-  }
+  // function checkEmail() {
+  //   validator.isEmail(values.email) ? setEmailSuccess(false) : setEmailSuccess(true)
+  // }
+
+  // function checkMsg() {
+  //   !validator.isEmpty(values.message) ? setMsgSuccess(false) : setMsgSuccess(true)
+  // }
   //TODO: add checkName function to check validation on blur
-
-  function handleChange(e) { 
-    setValues({ ...values, [e.target.name]: e.target.value });
-  }
-//padding: 0 20px;
   return (
     <div>
       <Header
@@ -88,7 +90,7 @@ export default function ContactPage(props) {
           height: 150,
           color: "white"
         }}
-        {...rest}
+        //{...rest}
       />
       <Parallax small>
         <div className={classes.container}>
@@ -107,7 +109,7 @@ export default function ContactPage(props) {
         <div>
           <div className={classes.projContainer}>
             <GridContainer>  
-            <GridItem xs={12} sm={12} md={12}>
+            {/* <GridItem xs={12} sm={12} md={12}>
             { success ? (
               <SnackbarContent
                 message={
@@ -131,9 +133,9 @@ export default function ContactPage(props) {
                 color="warning"
                 icon={Warning}
               /> ) : null }
-            </GridItem>
+            </GridItem> */}
             <GridItem xs={12} sm={12} md={12}>
-            <form onSubmit={handleSubmit}>
+            {/* <form onSubmit={handleSubmit}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
@@ -186,7 +188,27 @@ export default function ContactPage(props) {
                 </GridItem>
               </GridContainer>
             </GridContainer>
-          </form>
+          </form> */}
+          <form onSubmit={handleSubmit}>
+          <p>
+            <label>
+              Your Name: <input type="text" name="name" value={name} onChange={handleChange} />
+            </label>
+          </p>
+          <p>
+            <label>
+              Your Email: <input type="email" name="email" value={email} onChange={handleChange} />
+            </label>
+          </p>
+          <p>
+            <label>
+              Message: <textarea name="message" value={message} onChange={handleChange} />
+            </label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
             </GridItem>
             </GridContainer>
           </div>

@@ -5,7 +5,7 @@
         "title":"Kana",
         "url":"https://github.com/mierome16/kana-app",
         "desc":"A food web app to quickly and easily decide what you want to eat. It's like tinder, but for food!",
-        "fullDesc": " Developed over 2 weeks in a team of 3. Currently using React Native to redo the application to eventually deploy live",
+        "fullDesc": " Developed over 2 weeks in a team of 3 using Agile methodologies. Currently using React Native to redo the application to eventually deploy live",
         "tags":[
            "react/redux",
            "node",
