@@ -137,7 +137,7 @@ export default function ContactPage(props) {
               /> ) : null }
             </GridItem> */}
             <GridItem xs={12} sm={12} md={12}>
-            {/* <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
@@ -146,7 +146,7 @@ export default function ContactPage(props) {
                   //onBlur={() => console.log(values.name)}
                   // error={}
                   // success={}
-                  value={values.name}
+                  value={name}
                   onChange={handleChange}
                   formControlProps={{
                     fullWidth: true
@@ -159,8 +159,8 @@ export default function ContactPage(props) {
                   id="email"
                   //error={emailSuccess}
                   //success={true}
-                  onBlur={() => checkEmail()}
-                  value={values.email}
+                  // onBlur={() => checkEmail()}
+                  value={email}
                   onChange={handleChange}
                   formControlProps={{
                     fullWidth: true
@@ -172,8 +172,8 @@ export default function ContactPage(props) {
                 id="message"
                 //error={msgSuccess}
                 //success={true}
-                onBlur={() => checkMsg()}
-                value={values.message}
+                // onBlur={() => checkMsg()}
+                value={message}
                 onChange={handleChange}
                 formControlProps={{
                   fullWidth: true,
@@ -190,8 +190,28 @@ export default function ContactPage(props) {
                 </GridItem>
               </GridContainer>
             </GridContainer>
-          </form> */}
-          <form onSubmit={handleSubmit}>
+          </form>
+          {/* <form onSubmit={handleSubmit}>
+          <p>
+            <InputLabel>
+              Your Name: <Input type="text" name="name" value={name} onChange={handleChange} />
+            </InputLabel>
+          </p>
+          <p>
+            <InputLabel>
+              Your Email: <Input type="email" name="email" value={email} onChange={handleChange} />
+            </InputLabel>
+          </p>
+          <p>
+            <InputLabel>
+              Message: <Input multiline name="message" value={message} onChange={handleChange} />
+            </InputLabel>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form> */}
+          <form hidden onSubmit={handleSubmit}>
           <p>
             <label>
               Your Name: <input type="text" name="name" value={name} onChange={handleChange} />
