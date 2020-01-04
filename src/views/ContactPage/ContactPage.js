@@ -35,6 +35,8 @@ export default function ContactPage(props) {
   const [message,setMessage] = useState('');
   const [file, setFile] = useState({});
 
+  console.log(status)
+
  
   const encode = (data) => {
     const formData = new FormData();
