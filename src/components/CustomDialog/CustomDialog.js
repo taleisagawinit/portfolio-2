@@ -29,7 +29,8 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 const useStyles = makeStyles(styles);
 
 export default function CustomDialog(props) {
-   // const { props = false } = props;
+    //const { loading = false } = props;
+    const [loading, setLoading] = React.useState(true);
     //Add skeleton for images while props are loading
     const classes = useStyles();
     const settings = {
@@ -40,6 +41,12 @@ export default function CustomDialog(props) {
         slidesToScroll: 1,
         autoplay: false
     };
+
+    React.useEffect(() => {
+        //setTimeout(() => setLoading(false), 2000);
+        setTimeout(function(){ setLoading(false) }, 2000);
+        clearTimeout();
+    }, [])
 
 
   return props.item ? (
@@ -61,7 +68,7 @@ export default function CustomDialog(props) {
         disableTypography
         className={classes.modalHeader}
         >
-            { props.item ? (
+            { loading ? (
                 <Skeleton animation="wave" width={190} style={{backgroundColor: "#708ce524"}}/>
                 ) :
                 props.item.title
@@ -80,7 +87,7 @@ export default function CustomDialog(props) {
         id="classic-modal-slide-description"
         >
             <Card className={classes.cardCarousel} carousel>
-                { props.item ? (
+                { loading ? (
                 <Skeleton variant="rect" animation="wave" width={490} height={290} style={{backgroundColor: "#708ce524"}}/>
                 ) :
                 <Carousel {...settings}>
@@ -93,7 +100,7 @@ export default function CustomDialog(props) {
                 }             
             </Card>
             <p>
-            { props.item ? (
+            { loading ? (
                 <Skeleton animation="wave" width={290} style={{backgroundColor: "#708ce524"}}/>
                 ) :
                 props.item.desc + props.item.fullDesc
