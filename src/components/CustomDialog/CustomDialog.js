@@ -29,7 +29,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 const useStyles = makeStyles(styles);
 
 export default function CustomDialog(props) {
-    const { loading = false } = props;
+   // const { props = false } = props;
     //Add skeleton for images while props are loading
     const classes = useStyles();
     const settings = {
@@ -61,7 +61,7 @@ export default function CustomDialog(props) {
         disableTypography
         className={classes.modalHeader}
         >
-            { loading ? (
+            { props ? (
                 <Skeleton animation="wave" width={190} style={{backgroundColor: "#708ce524"}}/>
                 ) :
                 props.item.title
@@ -80,7 +80,7 @@ export default function CustomDialog(props) {
         id="classic-modal-slide-description"
         >
             <Card className={classes.cardCarousel} carousel>
-                { loading ? (
+                { props ? (
                 <Skeleton variant="rect" animation="wave" width={490} height={290} style={{backgroundColor: "#708ce524"}}/>
                 ) :
                 <Carousel {...settings}>
@@ -93,7 +93,7 @@ export default function CustomDialog(props) {
                 }             
             </Card>
             <p>
-            { loading ? (
+            { props ? (
                 <Skeleton animation="wave" width={290} style={{backgroundColor: "#708ce524"}}/>
                 ) :
                 props.item.desc + props.item.fullDesc

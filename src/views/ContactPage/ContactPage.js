@@ -43,6 +43,10 @@ export default function ContactPage(props) {
   const [emailHelper,setEmailHelper] = useState('');
   const [msgHelper,setMsgHelper] = useState('');
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   // const [name,setNameHelper] = useState('');
   // const [emailHelper,setEmailHelper] = useState('');
   // const [msgHelper,setMsgHelper] = useState('');
