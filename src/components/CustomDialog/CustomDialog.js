@@ -61,7 +61,7 @@ export default function CustomDialog(props) {
         disableTypography
         className={classes.modalHeader}
         >
-            { props ? (
+            { props.item ? (
                 <Skeleton animation="wave" width={190} style={{backgroundColor: "#708ce524"}}/>
                 ) :
                 props.item.title
@@ -80,7 +80,7 @@ export default function CustomDialog(props) {
         id="classic-modal-slide-description"
         >
             <Card className={classes.cardCarousel} carousel>
-                { props ? (
+                { props.item ? (
                 <Skeleton variant="rect" animation="wave" width={490} height={290} style={{backgroundColor: "#708ce524"}}/>
                 ) :
                 <Carousel {...settings}>
@@ -93,7 +93,7 @@ export default function CustomDialog(props) {
                 }             
             </Card>
             <p>
-            { props ? (
+            { props.item ? (
                 <Skeleton animation="wave" width={290} style={{backgroundColor: "#708ce524"}}/>
                 ) :
                 props.item.desc + props.item.fullDesc
