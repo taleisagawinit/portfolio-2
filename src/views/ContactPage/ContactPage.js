@@ -30,9 +30,22 @@ export default function ContactPage(props) {
   const [status,setStatus] = useState('');
   const [email,setEmail] = useState('');
   const [message,setMessage] = useState('');
-  const [file, setFile] = useState({});
 
-  console.log(status)
+  const [validName,setValidName] = useState(null);
+  const [validEmail,setValidEmail] = useState(null);
+  const [validMsg,setValidMsg] = useState(null);
+
+  const [invalidName,setInvalidName] = useState(null);
+  const [invalidEmail,setInValidEmail] = useState(null);
+  const [invalidMsg,setInvalidMsg] = useState(null);
+
+  const [nameHelper,setNameHelper] = useState('');
+  const [emailHelper,setEmailHelper] = useState('');
+  const [msgHelper,setMsgHelper] = useState('');
+
+  // const [name,setNameHelper] = useState('');
+  // const [emailHelper,setEmailHelper] = useState('');
+  // const [msgHelper,setMsgHelper] = useState('');
 
  
   const encode = (data) => {
@@ -44,16 +57,40 @@ export default function ContactPage(props) {
   }
 
   const handleSubmit = e => {
-    const data = { "form-name": "contact", name, email, message }
-    
-    fetch("/", {
-      method: "POST",
-      // headers: { "Content-Type": 'multipart/form-data; boundary=random' },
-      body: encode(data)
-    })
-      .then(() => setStatus("Form Submission Successful!!"))
-      .catch(error => setStatus("Form Submission Failed!"));
+    if (validator.isAlpha(name) && validator.isEmail(email) && !validator.isEmpty(message)) {
+      setValidName(true); setNameHelper(''); setInvalidName(false)
+      setValidEmail(true); setEmailHelper(''); setInValidEmail(false)
+      setValidMsg(true); setMsgHelper(''); setInvalidMsg(false)
 
+      const data = { "form-name": "contact", name, email, message }
+    
+      fetch("/", {
+        method: "POST",
+        // headers: { "Content-Type": 'multipart/form-data; boundary=random' },
+        body: encode(data)
+      })
+        .then(() => setStatus('success'))
+        .catch(error => setStatus('error'));
+    } else {
+      if (validator.isAlpha(name) && !validator.isEmpty(name)) { 
+        setValidName(true); setNameHelper(''); setInvalidName(false)
+      } else { 
+        setValidName(false); setNameHelper('Provide a name using alpha chars only'); setInvalidName(true)
+      }
+  
+      if (validator.isEmail(email)) {
+        setValidEmail(true); setEmailHelper(''); setInValidEmail(false)
+       } else { 
+        setValidEmail(false); setEmailHelper('Must be a valid email address'); setInValidEmail(true)
+       }
+      
+      if (!validator.isEmpty(message)) {
+        setValidMsg(true); setMsgHelper(''); setInvalidMsg(false)
+       } else { 
+         setValidMsg(false); setMsgHelper('Please add your message'); setInvalidMsg(true)
+       }
+    }
+  
     e.preventDefault();
   };
 
@@ -70,14 +107,6 @@ export default function ContactPage(props) {
     }
   }
 
-  // function checkEmail() {
-  //   validator.isEmail(values.email) ? setEmailSuccess(false) : setEmailSuccess(true)
-  // }
-
-  // function checkMsg() {
-  //   !validator.isEmpty(values.message) ? setMsgSuccess(false) : setMsgSuccess(true)
-  // }
-  //TODO: add checkName function to check validation on blur
   return (
     <div>
       <Header
@@ -89,7 +118,6 @@ export default function ContactPage(props) {
           height: 150,
           color: "white"
         }}
-        //{...rest}
       />
       <Parallax small>
         <div className={classes.container}>
@@ -108,70 +136,78 @@ export default function ContactPage(props) {
         <div>
           <div className={classes.projContainer}>
             <GridContainer>  
-            {/* <GridItem xs={12} sm={12} md={12}>
-            { success ? (
+            <GridItem xs={12} sm={12} md={12}>
+              { status == 'success' ? 
               <SnackbarContent
-                message={
+                message={ 
                   <span>
-                    <b>Success!</b> Your message has been sent. Thank you for reaching out! 
+                    <b>Your message has been sent.</b> Thank you for reaching out! 
                   </span>
                 }
                 close
-                color="success"
+                color={"success"}
                 icon={Check}
-              /> ) : null }
-              {error ? (
+              /> 
+              : status == 'error' ? 
               <SnackbarContent
-                message={
+                message={ 
                   <span>
-                    <b>Oh no!</b> Your message could not be sent, 
-                    please try again later.
+                    <b>Oh no! Your message could not be sent.</b> Please try again later or reach out on LinkedIn 
                   </span>
                 }
                 close
-                color="warning"
+                color={"danger"}
                 icon={Warning}
-              /> ) : null }
-            </GridItem> */}
+              /> : null
+              }
+            </GridItem>
             <GridItem xs={12} sm={12} md={12}>
             <form onSubmit={handleSubmit}>
             <GridContainer className={classes.formMargin}>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
-                  labelText="Your Name"
+                  labelText="Your Name*"
                   id="name"
                   //onBlur={() => console.log(values.name)}
                   // error={}
                   // success={}
+                  error={invalidName}
+                  success={validName}
                   value={name}
                   onChange={handleChange}
                   formControlProps={{
                     fullWidth: true
                   }}
+                  helperText={nameHelper}
                 />
               </GridItem>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
-                  labelText="Your Email"
+                  labelText="Your Email*"
                   id="email"
                   //error={emailSuccess}
                   //success={true}
                   // onBlur={() => checkEmail()}
+                  error={invalidEmail}
+                  success={validEmail}
                   value={email}
                   onChange={handleChange}
                   formControlProps={{
                     fullWidth: true
                   }}
+                  helperText={emailHelper}
                 />
               </GridItem>
               <GridItem xs={12} sm={12} md={12}>
               <CustomInput
-                labelText="Your Message"
+                labelText="Your Message*"
                 id="message"
                 //error={msgSuccess}
                 //success={true}
                 // onBlur={() => checkMsg()}
-                value={message}
+                error={invalidMsg}
+                success={validEmail}
+                value={message}              
                 onChange={handleChange}
                 formControlProps={{
                   fullWidth: true,
@@ -181,6 +217,7 @@ export default function ContactPage(props) {
                   multiline: true,
                   rows: 5
                 }}
+                helperText={msgHelper}
               />
               </GridItem>
               {/* <GridContainer justify="center"> */}

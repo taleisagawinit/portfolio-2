@@ -32,7 +32,7 @@ export default function ProjectsPage(props) {
   const [item, setItem] = React.useState(null);
   const [opened, setOpened] = React.useState(new Map());
   let submitSelected = Array.from(opened).filter(x => x[1]).map(y => y[0].id)
-  console.log(submitSelected)
+  // console.log(submitSelected)
   const { ...rest } = props;
   const settings = {
     dots: true,
@@ -60,7 +60,7 @@ export default function ProjectsPage(props) {
 
   useEffect(() => {
     axios.get('./data.json').then(resp => {
-      console.log(resp.data)
+      // console.log(resp.data)
       setProjects(resp.data.projects)
     })
   }, [])

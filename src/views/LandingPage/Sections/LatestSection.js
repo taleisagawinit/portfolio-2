@@ -23,7 +23,7 @@ export default function SkillSection() {
 
   React.useEffect(() => {
     axios.get('./data.json').then(resp => {
-      console.log(resp.data.meetups)
+      // console.log(resp.data.meetups)
       setMeetups(resp.data.meetups)
     })
   }, [])

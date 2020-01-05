@@ -8,6 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
+import FormHelperText from '@material-ui/core/FormHelperText';
 
 import styles from "assets/jss/material-kit-react/components/customInputStyle.js";
 
@@ -27,7 +28,8 @@ export default function CustomInput(props) {
     success,
     value,
     onChange,
-    onBlur
+    onBlur,
+    helperText
   } = props;
 
   const labelClasses = classNames({
@@ -82,6 +84,7 @@ export default function CustomInput(props) {
         onBlur={onBlur}
         {...inputProps}
       />
+    <FormHelperText id="component-helper-text">{helperText}</FormHelperText>
     </FormControl>
   );
 }
