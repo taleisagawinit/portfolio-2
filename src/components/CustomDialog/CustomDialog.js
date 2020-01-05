@@ -46,7 +46,7 @@ export default function CustomDialog(props) {
         //setTimeout(() => setLoading(false), 2000);
         setTimeout(function(){ setLoading(false) }, 2000);
         clearTimeout();
-    }, [])
+    }, [props.item])
 
 
   return props.item ? (
@@ -91,10 +91,11 @@ export default function CustomDialog(props) {
                 <Skeleton variant="rect" animation="wave" width={490} height={290} style={{backgroundColor: "#708ce524"}}/>
                 ) :
                 <Carousel {...settings}>
-                    {props.item.imgs ? props.item.imgs.map(x => 
+                    {props.item.imgs ? props.item.imgs.map(x => x ? (
                         <div>
                             <img src={require("assets/img/" + props.item.slug + "/" + x)} alt="First slide" className={"slick-image"} />
                         </div>
+                    ) : <Skeleton variant="rect" animation="wave" width={490} height={290} style={{backgroundColor: "#708ce524"}}/>
                     ) : null}
                 </Carousel>        
                 }             
