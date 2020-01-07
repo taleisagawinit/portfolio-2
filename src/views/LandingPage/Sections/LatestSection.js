@@ -84,7 +84,7 @@ export default function SkillSection() {
                   {meetup ? meetup.sort((a, b)=> a.date-b.date).map(x => 
                     <ListItem className={classes.block}>
                     <ChevronRight className={classes.info} />                   
-                      <a href={x.url} target="_blank" rel="noopener noreferrer">{x.title} (1/{x.date})</a>
+                      <a href={x.url} target="_blank" rel="noopener noreferrer">{x.title} {x.date !== 0 ? '(1/' + x.date + ')' : ''}</a>
                     </ListItem>
                   ) : null}
                 </List>
