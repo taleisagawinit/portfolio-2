@@ -108,7 +108,11 @@ const headerLinksStyle = theme => ({
       display: "block",
     }
   },
-  ...tooltip,
+  tooltip: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
+  },
   marginRight5: {
     marginRight: "5px"
   }

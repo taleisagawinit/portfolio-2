@@ -29,19 +29,6 @@ export default function Footer(props) {
   return (
     <footer className={footerClasses}>
       <div className={classes.container}>
-        {/* <div className={classes.left}>
-          <List className={classes.list}>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://unsplash.com/photos/Xaanw0s0pMk"
-                className={classes.block}
-                target="_blank"
-              >
-                talei pono
-              </a>
-            </ListItem>
-          </List>
-        </div> */}
         <div className={classes.right}>
           &copy; {1900 + new Date().getYear()} 
         </div>

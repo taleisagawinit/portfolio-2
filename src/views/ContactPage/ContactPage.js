@@ -129,7 +129,7 @@ export default function ContactPage(props) {
             <GridItem xs={12} sm={12} md={12}>
               <h1 className={classes.title}>Contact</h1>
               <h4>
-                Feedback? Comments? Hiring? Send me a message to connect! I'm also available on <Link to="/about">LinkedIn</Link>
+                Feedback? Comments? Hiring? Send me a message to connect! I'm also available on <a href="https://www.linkedin.com/in/taleisagawinit/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               </h4>
               <br />           
             </GridItem>

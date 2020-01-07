@@ -95,7 +95,7 @@ export default function ProjectsPage(props) {
             <GridItem xs={12} sm={12} md={12}>
               <h1 className={classes.title}>Projects</h1>
               <h4>
-                Here are some of my recent projects, click one to view its details. Check out everything I've worked on <Link to="/about">here</Link>
+                Here are some of my recent projects, click one to view its details. Check out everything I've worked on <a href="https://github.com/taleisagawinit/" target="_blank" rel="noopener noreferrer">here</a>
               </h4>
               <br />           
             </GridItem>
