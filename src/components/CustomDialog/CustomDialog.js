@@ -19,6 +19,7 @@ import GridItem from "components/Grid/GridItem.js";
 import Hidden from '@material-ui/core/Hidden';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Skeleton from '@material-ui/lab/Skeleton';
+import Tooltip from "@material-ui/core/Tooltip";
 
 
 
@@ -34,19 +35,21 @@ export default function CustomDialog(props) {
     //Add skeleton for images while props are loading
     const classes = useStyles();
     const settings = {
+        lazyLoad: 'onDemand',
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false
+        autoplay: false,
+
     };
 
     React.useEffect(() => {
         //setTimeout(() => setLoading(false), 2000);
         setTimeout(function(){ setLoading(false) }, 2000);
-        clearTimeout();
-    }, [props.item])
+        //clearTimeout();
+    }, [])
 
 
   return props.item ? (
@@ -109,11 +112,24 @@ export default function CustomDialog(props) {
             </p>       
         </DialogContent>
         <DialogActions className={classes.modalFooter}>
+            {props.item.url ? (
         <Button color="transparent" className={classes.btn}>
             <a className={classes.noUnderline} href={props.item.url} target="_blank" rel="noopener noreferrer">
             View Source <GitHubIcon className={classes.github} />
             </a>
         </Button>
+            ) :
+                <Tooltip
+                id="instagram-tooltip"
+                title="This repo is private"
+                placement={window.innerWidth > 959 ? "top" : "left"}
+                classes={classes.tooltip}
+                >
+                <Button color="transparent" disabled className={classes.btn}>
+                    View Source <GitHubIcon className={classes.github} />
+                </Button>
+                </Tooltip>
+           }
         <Button
             onClick={props.toggle}
             className={classes.btn}

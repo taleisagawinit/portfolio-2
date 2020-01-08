@@ -2,6 +2,7 @@ import { container, title, cardTitle, mainRaised } from "assets/jss/material-kit
 
 import imagesStyle from "assets/jss/material-kit-react/imagesStyles.js";
 import modalStyle from "assets/jss/material-kit-react/modalStyle.js";
+import tooltip from "assets/jss/material-kit-react/tooltipsStyle.js";
 
 
 const profilePageStyle = {
@@ -202,7 +203,13 @@ const profilePageStyle = {
     fontWeight: "700",
     fontFamily: `"Roboto Slab", "Times New Roman", serif`,
     margin: "0"
-  }
+  },
+tooltip: {
+  ...tooltip,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center"
+},
 };
 
 export default profilePageStyle;
