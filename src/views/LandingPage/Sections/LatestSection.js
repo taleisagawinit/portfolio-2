@@ -80,33 +80,11 @@ export default function SkillSection() {
             <InfoArea
               title="Meetup With Me"
               description={
-                // <List className={classes.list}>
-                  // <ListItem className={classes.block}>
-                  // <ChevronRight className={classes.info} />                   
-                  //   <a href="https://www.meetup.com/Las-Vegas-Developers/events/dzkhdrybccbpb/" target="_blank" rel="noopener noreferrer">Demo Day (1/11)</a>
-                  // </ListItem>
-                //   <ListItem className={classes.block}>
-                //   <ChevronRight className={classes.info} />                                        
-                //     <a href="https://www.meetup.com/AgileNV/events/266465324/" target="_blank" rel="noopener noreferrer">Agile (1/15)</a>
-                //   </ListItem>
-                //   <ListItem className={classes.block}>
-                //   <ChevronRight className={classes.info} />                                      
-                //     <a href="https://www.meetup.com/ReactVegas/" target="_blank" rel="noopener noreferrer">React Vegas</a>
-                //   </ListItem>
-                //   <ListItem className={classes.block}>  
-                //   <ChevronRight className={classes.info} />                                      
-                //     <a href="https://www.meetup.com/Las-Vegas-UX-UI/events/shpfmrybccbxb/" target="_blank" rel="noopener noreferrer">UX/UI (1/18)</a>
-                //   </ListItem>
-                //   <ListItem className={classes.block}>     
-                //   <ChevronRight className={classes.info} />                                   
-                //     <a href="https://www.meetup.com/IGDA-Las-Vegas-Game-Development-Meetup/events/vbfxsqybccbkb/" target="_blank" rel="noopener noreferrer">IGDA (1/7)</a>
-                //   </ListItem>
-                // </List>
                 <List className={classes.list}>
                   {meetup ? meetup.sort((a, b)=> a.date-b.date).map(x => 
                     <ListItem className={classes.block}>
                     <ChevronRight className={classes.info} />                   
-                      <a href={x.url} target="_blank" rel="noopener noreferrer">{x.title} (1/{x.date})</a>
+                      <a href={x.url} target="_blank" rel="noopener noreferrer">{x.title} {x.date !== 0 ? '(1/' + x.date + ')' : ''}</a>
                     </ListItem>
                   ) : null}
                 </List>

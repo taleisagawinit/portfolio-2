@@ -34,7 +34,6 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          //href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"
           color="transparent"
           target="_blank"
           className={classes.navLink}
@@ -46,7 +45,6 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          //href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"
           color="transparent"
           target="_blank"
           className={classes.navLink}
@@ -59,7 +57,7 @@ export default function HeaderLinks(props) {
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-twitter"
-          title="Email: taleipono@gmail.com"
+          title="taleipono@gmail.com"
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
@@ -71,7 +69,7 @@ export default function HeaderLinks(props) {
           >
             <i className={classes.socialIcons + " far fa-envelope"} />
             <Hidden mdUp>
-              <p>taleipono@gmail.com</p>
+              <div style={{marginLeft: "10px"}}>taleipono@gmail.com</div>
             </Hidden>
           </Button>
         </Tooltip>
@@ -79,7 +77,7 @@ export default function HeaderLinks(props) {
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-facebook"
-          title="Github: @taleisagawinit"
+          title="@taleisagawinit"
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
@@ -91,7 +89,7 @@ export default function HeaderLinks(props) {
           >
             <i className={classes.socialIcons + " fab fab fa-github"} />
             <Hidden mdUp>
-              <p>@taleisagawinit</p>
+              <div style={{marginLeft: "10px"}}>@taleisagawinit</div>
             </Hidden>
           </Button>
         </Tooltip>
@@ -99,7 +97,7 @@ export default function HeaderLinks(props) {
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-tooltip"
-          title="Add me on LinkedIn"
+          title="Talei Sagawinit"
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
@@ -111,7 +109,7 @@ export default function HeaderLinks(props) {
           >
             <i className={classes.socialIcons + " fab fa-linkedin-in"} />
             <Hidden mdUp>
-              <p>Talei Sagawinit</p>
+              <div style={{marginLeft: "10px"}}>Talei Sagawinit</div>
             </Hidden>
           </Button>
         </Tooltip>
