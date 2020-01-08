@@ -19,8 +19,9 @@ import Carousel from "react-slick";
 import CustomDialog from "components/CustomDialog/CustomDialog";
 import axios from 'axios';
 import styles from "./profilePage.js";
+import Hidden from '@material-ui/core/Hidden';
+import Button from "components/CustomButtons/Button.js";
 
-import { Button } from "@material-ui/core";
 //const projects = require("data.json");
 const useStyles = makeStyles(styles);
 
@@ -40,7 +41,8 @@ export default function ProjectsPage(props) {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false
+    autoplay: false,
+    initialSlide: 2
   };
   const imageClasses = classNames(
     classes.imgRaised,
@@ -119,11 +121,13 @@ export default function ProjectsPage(props) {
                     </h4>
                   </div> */}
                   {/* <div onClick={() => toggleModal(x)} className={classNames(classes.cardContent, submitSelected.includes(x.id) ? classes.mobileContent : null)}> */}
-                  <div onClick={() => toggleModal(x)} className={classNames(classes.cardContent)}>
+                  <div className={classNames(classes.cardContent)}>
                     <p className={classes.description}>
                       {x.desc}
                     </p>
-                    {/* <Button className={classes.smallTitle}>Details</Button> */}
+                      <Button onClick={() => toggleModal(x)} color="transparent" className={classes.btn}>
+                          Details
+                      </Button>
                   </div>
                   {/* <div className={classes.mobileContent}>
                     <Card className={classes.cardCarousel} carousel>

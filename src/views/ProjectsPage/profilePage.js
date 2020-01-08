@@ -77,11 +77,13 @@ const profilePageStyle = {
     },
     "&:hover $cardContent, &:focus $cardContent": {
       top: "0",
-      opacity: 1
+      opacity: 1,
+      display: "inherit"
     },
     "&:hover $featured, &:focus $featured": {
       opacity: 0,
     }
+    
   },
   btn: {
     textDecoration: "none",
@@ -110,6 +112,7 @@ const profilePageStyle = {
     backgroundImage: "url(" + require("assets/img/1.png") + ")",
     backgroundSize: "110%",
     opacity: 0,
+    display: "none",
     transition: "0.5s",
     overflow: "hidden",
     padding: "10px",

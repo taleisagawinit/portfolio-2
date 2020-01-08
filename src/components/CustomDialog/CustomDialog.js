@@ -50,7 +50,6 @@ export default function CustomDialog(props) {
 
 
   return props.item ? (
-    <Hidden xsDown>
     <Dialog
         classes={{
         root: classes.center,
@@ -96,7 +95,7 @@ export default function CustomDialog(props) {
                             <img src={require("assets/img/" + props.item.slug + "/" + x)} alt="First slide" className={"slick-image"} />
                         </div>
                     ) : <Skeleton variant="rect" animation="wave" width={490} height={290} style={{backgroundColor: "#708ce524"}}/>
-                    ) : null}
+                    ) : <Skeleton variant="rect" animation="wave" width={490} height={290} style={{backgroundColor: "#708ce524"}}/>                }
                 </Carousel>        
                 }             
             </Card>
@@ -124,6 +123,5 @@ export default function CustomDialog(props) {
         </Button>
         </DialogActions>
     </Dialog> 
-    </Hidden>
   ) : null
 }
