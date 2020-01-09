@@ -35,7 +35,6 @@ export default function CustomDialog(props) {
     //Add skeleton for images while props are loading
     const classes = useStyles();
     const settings = {
-        lazyLoad: 'onDemand',
         dots: true,
         infinite: true,
         speed: 500,
@@ -93,12 +92,12 @@ export default function CustomDialog(props) {
                 <Skeleton variant="rect" animation="wave" width={490} height={290} style={{backgroundColor: "#708ce524"}}/>
                 ) :
                 <Carousel {...settings}>
-                    {props.item.imgs ? props.item.imgs.map(x => x ? (
+                    {props.item.imgs ? props.item.imgs.map(x =>
                         <div key={props.item.id}>
                             <img src={require("assets/img/" + props.item.slug + "/" + x)} alt="First slide" className={"slick-image"} />
                         </div>
-                    ) : <Skeleton variant="rect" animation="wave" width={490} height={290} style={{backgroundColor: "#708ce524"}}/>
-                    ) : <Skeleton variant="rect" animation="wave" width={490} height={290} style={{backgroundColor: "#708ce524"}}/>                }
+                    ) : <Skeleton variant="rect" animation="wave" width={490} height={290} style={{backgroundColor: "#708ce524"}}/>  
+                    }
                 </Carousel>        
                 }             
             </Card>
