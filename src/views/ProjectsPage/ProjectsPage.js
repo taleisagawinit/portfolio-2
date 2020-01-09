@@ -31,6 +31,7 @@ export default function ProjectsPage(props) {
   const [projects, setProjects] = React.useState(null);
   const [item, setItem] = React.useState(null);
   const [opened, setOpened] = React.useState(new Map());
+  console.log(item)
   let submitSelected = Array.from(opened).filter(x => x[1]).map(y => y[0].id)
   // console.log(submitSelected)
   const { ...rest } = props;
@@ -69,11 +70,15 @@ export default function ProjectsPage(props) {
     window.scrollTo(0, 0)
   }, [])
 
-
   function toggleModal(x) {
     setItem(x);
     setClassicModal(true);
     //setShowMobile(true)
+  }
+
+  function closeModal() {
+    setClassicModal(false);
+    setItem(null);
   }
 
   return (
@@ -162,7 +167,7 @@ export default function ProjectsPage(props) {
             </GridContainer>
           </div>
         </div>
-          <CustomDialog item={item} open={classicModal} toggle={() => setClassicModal(false)} />
+          <CustomDialog item={item} open={classicModal} toggle={() => closeModal()} />
       </div>
       <Footer />
     </div>

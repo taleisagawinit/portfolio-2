@@ -21,7 +21,8 @@ const productStyle = {
   infoCard: {
     marginTop: "115px",
     paddingTop: "70px",
-    paddingBottom: "30px"
+    paddingBottom: "30px",
+    maxHeight: "400px"
   }
   
 };

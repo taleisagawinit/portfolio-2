@@ -99,29 +99,12 @@ export default function SkillSection() {
           <GridItem xs={12} sm={12} md={4}>
           <Card className={classes.infoCard}>
             <InfoArea
-              title="Coding To"
+              title="Listening To"
               description={
                 <List className={classes.list}>
-                  <ListItem className={classes.block}>
-                  <ChevronRight className={classes.info} />                   
-                    <a href="https://soundcloud.com/sugiwa/urtha1" target="_blank" rel="noopener noreferrer">Urtha1</a>
-                  </ListItem>
-                  <ListItem className={classes.block}>
-                  <ChevronRight className={classes.info} />                                        
-                    <a href="https://soundcloud.com/gavinturek/2am-1" target="_blank" rel="noopener noreferrer">2AM</a>
-                  </ListItem>
-                  <ListItem className={classes.block}>
-                  <ChevronRight className={classes.info} />                                      
-                    <a href="https://soundcloud.com/primabeats/june-gloom-1" target="_blank" rel="noopener noreferrer">June Gloom</a>
-                  </ListItem>
-                  <ListItem className={classes.block}>  
-                  <ChevronRight className={classes.info} />                                      
-                    <a href="https://open.spotify.com/playlist/1HnrBuUgBYw7E67Rie2vN8" target="_blank" rel="noopener noreferrer">Spotify</a>
-                  </ListItem>
-                  <ListItem className={classes.block}>     
-                  <ChevronRight className={classes.info} />                                   
-                    <a href="https://www.youtube.com/watch?v=hHW1oY26kxQ" target="_blank" rel="noopener noreferrer">Lofi Radio</a>
-                  </ListItem>
+                  <div>
+                    <iframe width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/476769048&color=%23fc86a3&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                  </div>                                 
                 </List>
               }
               icon={PlayArrow}

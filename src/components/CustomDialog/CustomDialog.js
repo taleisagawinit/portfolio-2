@@ -95,7 +95,7 @@ export default function CustomDialog(props) {
                 ) :
                 <Carousel {...settings}>
                     {props.item.imgs ? props.item.imgs.map(x => x ? (
-                        <div>
+                        <div key={props.item.id}>
                             <img src={require("assets/img/" + props.item.slug + "/" + x)} alt="First slide" className={"slick-image"} />
                         </div>
                     ) : <Skeleton variant="rect" animation="wave" width={490} height={290} style={{backgroundColor: "#708ce524"}}/>
