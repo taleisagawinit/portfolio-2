@@ -109,6 +109,7 @@ const headerLinksStyle = theme => ({
     }
   },
   tooltip: {
+    ...tooltip,
     display: "flex",
     justifyContent: "center",
     alignItems: "center"

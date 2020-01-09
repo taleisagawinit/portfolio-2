@@ -51,7 +51,7 @@
      {
         "id":4,
         "title":"365",
-        "url":"",
+        "url":null,
         "desc":"A mobile app developed for a new local business, to encourage all people to try new activities and adventures.",
         "fullDesc": " Uses Tinder-style swiping to find things to do and win awards for completing them.",
         "tags":[
@@ -69,7 +69,7 @@
      {
         "id":5,
         "title":"RMA Admin",
-        "url":"https://github.com/taleisagawinit/resApp",
+        "url": null,
         "desc":"A PWA created for a local business to improve client and employee management and communication",
         "fullDesc": " ",
         "tags":[
