@@ -27,16 +27,16 @@ const landingPageStyle = {
     //position: "relative",
     //left: 0,
     margin: "0 10px",
-    cursor: "pointer",
-    "&:hover": {
-      opacity: "0.6",
-    },
-    "&:hover + $engTitle, &:hover + $engTitle": {
-      display: "inline-block",
-     },
-     "&:hover + $engTitle + $title, &:focus + $engTitle + $title": {
-      display: "none",
-     },
+    // cursor: "pointer",
+    // "&:hover": {
+    //   opacity: "0.6",
+    // },
+    // "&:hover + $engTitle, &:hover + $engTitle": {
+    //   display: "inline-block",
+    //  },
+    //  "&:hover + $engTitle + $title, &:focus + $engTitle + $title": {
+    //   display: "none",
+    //  },
   //   "&:hover + $engTitle": {
   //     display: "none"
   //  }
@@ -66,7 +66,7 @@ const landingPageStyle = {
   },
   engTitle: {
     ...title,
-    display: "none",
+    //display: "none",
     position: "relative",
     marginTop: "30px",
     minHeight: "32px",

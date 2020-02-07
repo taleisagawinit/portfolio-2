@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 // nodejs library that concatenates classes
 import classNames from "classnames";
@@ -27,14 +27,15 @@ const useStyles = makeStyles(styles);
 
 export default function ProjectsPage(props) {
   const classes = useStyles();
-  const [classicModal, setClassicModal] = React.useState(false);
-  const [showMobile, setShowMobile] = React.useState(false);
-  const [projects, setProjects] = React.useState(null);
-  const [item, setItem] = React.useState(null);
-  const [opened, setOpened] = React.useState(new Map());
-  console.log(item)
+  const [classicModal, setClassicModal] = useState(false);
+  const [showMobile, setShowMobile] = useState(false);
+  const [projects, setProjects] = useState(null);
+  const [item, setItem] = useState(null);
+  const [disabledBtn, setDisabledBtn] = useState(true);
+  const [opened, setOpened] = useState(new Map());
   let submitSelected = Array.from(opened).filter(x => x[1]).map(y => y[0].id)
   // console.log(submitSelected)
+  console.log(disabledBtn)
   const { ...rest } = props;
   const settings = {
     dots: true,
@@ -74,12 +75,19 @@ export default function ProjectsPage(props) {
 
   function toggleModal(x) {
     setItem(x);
-    setClassicModal(true);
+    //setClassicModal(true);
+    setTimeout(function(){ setDisabledBtn(false) }, 3000);
+
     //setShowMobile(true)
+  }
+
+  function enableBtn() {
+    setClassicModal(true)
   }
 
   function closeModal() {
     setClassicModal(false);
+    setDisabledBtn(true);
     setItem(null);
   }
 
@@ -126,29 +134,17 @@ export default function ProjectsPage(props) {
                     </h4>
                   </div> */}
                   {/* <div onClick={() => toggleModal(x)} className={classNames(classes.cardContent, submitSelected.includes(x.id) ? classes.mobileContent : null)}> */}
-                  <div className={classNames(classes.cardContent)}>
+                  <div onClick={() => toggleModal(x)} className={classNames(classes.cardContent)}>
                     <p className={classes.description}>
                       {x.desc}
                     </p>
-                      <Button onClick={() => toggleModal(x)} color="transparent" className={classes.btn}>
-                          Details
+                    <Hidden smUp>
+                      <Button disabled={disabledBtn} onClick={() => enableBtn()} color="transparent" className={classes.btn}>
+                        Details
                       </Button>
+                    </Hidden>
+                      
                   </div>
-                  {/* <div className={classes.mobileContent}>
-                    <Card className={classes.cardCarousel} carousel>
-                      <Carousel {...settings}>
-                      <div>
-                          <img src={require("assets/img/" + x.slug + "/1.png")} alt="First slide" className={"slick-image", classes.images} />
-                      </div>
-                      <div>
-                          <img src={require("assets/img/" + x.slug + "/2.png")} alt="Second slide" className={"slick-image", classes.images}/>
-                      </div>
-                      <div>
-                          <img src={require("assets/img/" + x.slug + "/3.png")} alt="First slide" className={"slick-image", classes.images} />                         
-                      </div>
-                      </Carousel>                     
-                    </Card>
-                  </div> */}
                   {x.featured ? 
                   <div className={classes.featured}>                  
                     <p className={classes.featuredContent}>

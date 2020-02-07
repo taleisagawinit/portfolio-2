@@ -65,9 +65,9 @@ export default function LandingPage(props) {
             </GridItem>
             <GridItem xs={12} sm={12} md={9} >
               <div className={classes.heading}>
-                <span className={classes.intro}><HelpOutline className={classes.iconClass} /></span>
-                <h1 className={classes.engTitle}>Hello! I'm Talei</h1> 
-                <h1 className={classes.title}>Aloha! 'O Talei ko'u inoa.</h1>
+                {/* <span className={classes.intro}><HelpOutline className={classes.iconClass} /></span> */}
+                <h1 className={classes.engTitle}>Hello! I'm Talei Sagawinit</h1> 
+                {/* <h1 className={classes.title}>Aloha! 'O Talei ko'u inoa.</h1> */}
               {/* <div className={classes.intro}> */}
               </div>  
                 

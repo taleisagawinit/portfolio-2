@@ -87,6 +87,7 @@ const profilePageStyle = {
     
   },
   btn: {
+    background: "#000",
     textDecoration: "none",
 
     "&:hover": {

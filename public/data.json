@@ -103,8 +103,8 @@
      {
         "id":1,
         "title":"Las Vegas Developers",
-        "url":"https://www.meetup.com/Las-Vegas-Developers/events/dzkhdrybccbpb/",
-        "date": 11
+        "url":"https://www.meetup.com/Las-Vegas-Developers/",
+        "date": 0
      },
      {
         "id":2,
@@ -115,20 +115,20 @@
      {
         "id":3,
         "title":"Las Vegas IGDA",
-        "url":"https://www.meetup.com/IGDA-Las-Vegas-Game-Development-Meetup/events/vbfxsqybccbkb/",
-        "date": 7
+        "url":"https://www.meetup.com/IGDA-Las-Vegas-Game-Development-Meetup/",
+        "date": 0
      },
      {
         "id":4,
         "title":"Agile NV",
-        "url":"https://www.meetup.com/AgileNV/events/266465324/",
-        "date": 15
+        "url":"https://www.meetup.com/AgileNV/",
+        "date": 0
      },
      {
         "id":5,
         "title":"Las Vegas UX/UI",
-        "url":"https://www.meetup.com/Las-Vegas-UX-UI/events/shpfmrybccbxb/",
-        "date": 18
+        "url":"https://www.meetup.com/Las-Vegas-UX-UI/",
+        "date": 0
      }
   ]
 }
